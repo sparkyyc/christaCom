@@ -1,0 +1,7 @@
+.header {
+    background-color: blueviolet;
+
+    display: grid;
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1 ;
+}
