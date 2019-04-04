@@ -1,7 +1,55 @@
 .header {
-    background-color: blueviolet;
-
-    display: grid;
     grid-row: 1 / span 1;
     grid-column: 1 / -1 ;
+
+    
+}
+
+.logo {
+    height: 100vh;
+
+    &__container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+
+    &__circle {
+        background-color: aqua;
+        position: relative;
+
+        height: 50%;
+        width: 50%;
+        border-radius: 50%;
+        display: inline-block;
+        padding-bottom: 50%;
+    }
+
+    &__rocketship {
+        height: 20rem;
+
+        position: absolute;
+        // left: 30%;
+
+        transform: rotate(45deg)
+    }
+
+    &__firstname {
+        transform: scale(10);
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        fill: #fff;
+    }
+
+    &__lastname {
+        transform: scale(10);
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        fill: #fff;
+    }
 }

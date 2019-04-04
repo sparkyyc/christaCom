@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import SEO from "../components/seo"
 
+import About from "../components/About";
 import Container from "../components/Container"
 import Header from "../components/Header"
 import Nav from "../components/Nav"
@@ -28,6 +29,7 @@ const IndexPage = () => (
   <Container>
     <Header />
     <Nav />
+    <About />
     <Skills />
     <Projects />
     <Contact />
