@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 432 432" style="enable-background:new 0 0 432 432;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{stroke:#000000;stroke-width:0.6214;stroke-linecap:square;}
+</style>
+<defs>
+	<linearGradient id="GradientBot">
+          <stop offset="0%" stop-color="#fff" stop-opacity="1" />
+          <stop offset="65%" stop-color="#fff" stop-opacity=".5" />
+		  <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+    </linearGradient>
+	<linearGradient id="GradientTop">
+          <stop offset="0%" stop-color="#fff" stop-opacity="0" />
+          <stop offset="40%" stop-color="#fff" stop-opacity=".5" />
+		  <stop offset="100%" stop-color="#fff" stop-opacity="1" />
+    </linearGradient>
+</defs>
+<path className="star-12" d="M268,234.6l52-6.3l-52-6.3c-21.4-2.6-38.2-19.3-40.7-40.7l-6.3-52l-6.3,52c-2.6,21.4-19.3,38.2-40.7,40.7l-52,6.3l52,6.3
+	c21.4,2.6,38.2,19.3,40.7,40.7l6.3,52l6.3-52C229.8,253.9,246.6,237.1,268,234.6z"/>
+<path className="star-13" d="M152.1,141.2l39.4-4.7l-39.4-4.7c-13.4-1.6-23.8-12.1-25.5-25.5l-4.7-39.4l-4.7,39.4c-1.6,13.4-12.1,23.8-25.5,25.5
+	l-39.4,4.7l39.4,4.7c13.4,1.6,23.8,12.1,25.5,25.5l4.7,39.4l4.7-39.4C128.2,153.2,138.7,142.8,152.1,141.2z"/>
+<path className="star-14" d="M302.8,314.5l-4.4-36.3l-4.4,36.3c-1.4,11.4-10.3,20.3-21.7,21.7l-36.3,4.4l36.3,4.4c11.4,1.4,20.3,10.3,21.7,21.7l4.4,36.3
+	l4.4-36.3c1.4-11.4,10.3-20.3,21.7-21.7l36.3-4.4l-36.3-4.4C313.1,334.9,304.2,325.9,302.8,314.5z"/>
+</svg>
