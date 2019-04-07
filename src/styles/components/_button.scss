@@ -1,0 +1,64 @@
+.button {
+    &,
+    &:link,
+    &:visited {
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      padding-top: 5px;
+      padding-left: 5px;
+      // background-color: transparent;
+      background-color: $color-white;
+      border-radius: 10rem;
+      text-decoration: none;
+
+      font-size: 3rem;
+      font-family: "Orbitron", sans-serif;
+      // color: $color-white;
+      color: $color-primary;
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      // border-bottom: 4px solid $color-white;
+
+      grid-row: 9 / span 1;
+      grid-column: 4 / span 2;
+      align-self: end;
+      justify-self: center;
+
+      transition: all 0.2s;
+      overflow: hidden;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+
+    &:hover &__icon {
+      transform: rotate(0deg);
+    }
+
+    &:active {
+      outline: none;
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+
+    &:active &__icon {
+      transform: rotate(0deg) translateY(-5rem);
+    }
+
+    &__icon {
+      // height: 10%;
+      width: 32px;
+      padding-bottom: 5px;
+      // fill: #fff;
+      fill: #7c9be2;
+      transform: rotate(90deg);
+      transition: transform 0.3s, fill 0.18s;
+    }
+  }

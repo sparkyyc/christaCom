@@ -9,7 +9,13 @@
 }
 
 @keyframes orbit {
-    0%   { transform: rotate(360deg) translateX(225%) translateY(-40%); }
+    0%   { transform: rotate(360deg) translateX(220%) translateY(-40%); }
     90% { transform: rotate(0deg) translateX(220%) translateY(-40%); }
     100% { transform: rotate(0deg) translateX(220%) translateY(-40%); }
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, -15px); }
+    to   { transform: translate(0, -0px); }    
 }

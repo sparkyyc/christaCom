@@ -1,11 +1,14 @@
+// HEADER CONTAINER
 .header {
   grid-row: 1 / span 1;
   grid-column: 1 / -1;
   position: relative;
-  background-image: linear-gradient(to top, rgba(#7c9be2, 0.7), rgba(pink, 0.7)),
+  background-image: linear-gradient(to top, rgba($color-primary, 0.7), rgba($color-secondary, 0.7)),
     url(../images/galaxy-milkyway.jpg);
   background-size: cover;
 }
+
+// LOGO AKA CIRCLE WITH MY NAME
 
 .logo {
   height: 100vh;
@@ -21,7 +24,7 @@
   }
 
   &__circle {
-    background-color: #7c9be2;
+    background-color: $color-primary;
     position: relative;
 
     height: 50%;
@@ -30,99 +33,22 @@
     display: inline-block;
     padding-bottom: 50%;
 
-    box-shadow: 0 1.5rem 4rem rgba(#000, 0.15);
+    box-shadow: 0 1.5rem 4rem rgba(#000, 0.4);
 
     &:hover {
-      //   .star {
-      //     &-1 {
-      //       animation: twinkle 0.75s alternate infinite;
-      //       animation-delay: 1s;
-      //     }
-
-      //     &-2 {
-      //       animation: twinkle 0.75s alternate infinite;
-      //       animation-delay: 1s;
-      //     }
-
-      //     &-3 {
-      //       animation: twinkle 0.75s alternate infinite;
-      //       animation-delay: 0.75s;
-      //     }
-
-      //     &-4 {
-      //       animation: twinkle 0.75s alternate infinite;
-      //       animation-delay: 0.5s;
-      //     }
-
-      //     &-5 {
-      //       animation: twinkle 0.75s alternate infinite;
-      //       animation-delay: 0s;
-      //     }
-
-      //     &-6 {
-      //       animation: twinkle 0.75s alternate infinite;
-      //       animation-delay: 0s;
-      //     }
-
-      //     &-7 {
-      //       animation: twinkle 0.75s alternate infinite;
-      //       animation-delay: 0.1s;
-      //     }
-
-      //     &-8 {
-      //       animation: twinkle 0.75s alternate infinite;
-      //       animation-delay: 0.2s;
-      //     }
-
-      //     &-9 {
-      //       animation: twinkle 0.75s alternate infinite;
-      //       animation-delay: 0.2s;
-      //     }
-
-      //     &-10 {
-      //       animation: twinkle 0.75s alternate infinite;
-      //       animation-delay: 0.5s;
-      //     }
-
-      //     &-11 {
-      //       animation: twinkle 0.75s alternate infinite;
-      //       animation-delay: 0.75s;
-      //     }
-
-      //     &-12 {
-      //       animation: twinkle 0.75s alternate infinite;
-      //       animation-delay: 0.25s;
-      //     }
-
-      //     &-13 {
-      //       animation: twinkle 0.75s alternate infinite;
-      //       animation-delay: 0.5s;
-      //     }
-
-      //     &-14 {
-      //       animation: twinkle 0.75s alternate infinite;
-      //       animation-delay: 0.75s;
-      //     }
-      //   }
-
-      //   .logo__rocketship {
-      //     top: 35%;
-      //     left: 43%;
-      //     transform: rotate(-25deg);
-      //     animation: orbit 10s cubic-bezier(0.42, 0.01, 0.68, 1.24) infinite;
-      //   }
+      // If want logo animation only on hover, copy code here
     }
   }
 
   &__rocketship {
     height: 27%;
     width: auto;
-    fill: #fff;
+    fill: $color-white;
     z-index: 10;
 
     position: absolute;
-    top: 24%;
-    left: 78%;
+    // top: 24%;
+    // left: 78%;
   }
 
   &__firstname {
@@ -153,16 +79,16 @@
     border-radius: 50%;
     background: linear-gradient(
       to top left,
-      rgba(pink, 1) 0%,
-      rgba(pink, 0) 90%,
-      rgba(pink, 0) 100%
+      rgba($color-secondary, 1) 0%,
+      rgba($color-secondary, 0) 90%,
+      rgba($color-secondary, 0) 100%
     );
 
     &::after {
       content: "";
       width: 90%;
       height: 90%;
-      background-color: #7c9be2;
+      background-color: $color-primary;
       position: absolute;
       border-radius: 50%;
     }
@@ -170,7 +96,7 @@
 
   &__stars {
     position: absolute;
-    fill: rgba(#fff, 0.7);
+    fill: rgba($color-white, 0.7);
 
     &-1 {
       height: 40%;
@@ -209,6 +135,89 @@
   }
 }
 
+// LOGO ANIMATIONS
+
+.star {
+    &-1 {
+      animation: twinkle 0.75s alternate infinite;
+      animation-delay: 1s;
+    }
+  
+    &-2 {
+      animation: twinkle 0.75s alternate infinite;
+      animation-delay: 1s;
+    }
+  
+    &-3 {
+      animation: twinkle 0.75s alternate infinite;
+      animation-delay: 0.75s;
+    }
+  
+    &-4 {
+      animation: twinkle 0.75s alternate infinite;
+      animation-delay: 0.5s;
+    }
+  
+    &-5 {
+      animation: twinkle 0.75s alternate infinite;
+      animation-delay: 0s;
+    }
+  
+    &-6 {
+      animation: twinkle 0.75s alternate infinite;
+      animation-delay: 0s;
+    }
+  
+    &-7 {
+      animation: twinkle 0.75s alternate infinite;
+      animation-delay: 0.1s;
+    }
+  
+    &-8 {
+      animation: twinkle 0.75s alternate infinite;
+      animation-delay: 0.2s;
+    }
+  
+    &-9 {
+      animation: twinkle 0.75s alternate infinite;
+      animation-delay: 0.2s;
+    }
+  
+    &-10 {
+      animation: twinkle 0.75s alternate infinite;
+      animation-delay: 0.5s;
+    }
+  
+    &-11 {
+      animation: twinkle 0.75s alternate infinite;
+      animation-delay: 0.75s;
+    }
+  
+    &-12 {
+      animation: twinkle 0.75s alternate infinite;
+      animation-delay: 0.25s;
+    }
+  
+    &-13 {
+      animation: twinkle 0.75s alternate infinite;
+      animation-delay: 0.5s;
+    }
+  
+    &-14 {
+      animation: twinkle 0.75s alternate infinite;
+      animation-delay: 0.75s;
+    }
+  }
+  
+  .logo__rocketship {
+    top: 35%;
+    left: 43%;
+    //   transform: rotate(-25deg);
+    animation: orbit 10s cubic-bezier(0.42, 0.01, 0.68, 1.24) infinite;
+  }
+  
+
+// BACKGROUND OF HEADER
 .background {
   display: grid;
   position: absolute;
@@ -222,154 +231,21 @@
   &__planet {
     width: 100%;
     height: auto;
+    fill: $color-white;
+    
   }
 
   &__astro {
-    fill: #fff;
+    fill: $color-white;
     height: 100%;
     grid-row: 8 / -1;
     grid-column: 2 / span 2;
     justify-self: center;
-  }
-
-  &__button {
-    &,
-    &:link,
-    &:visited {
-      width: 90%;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-
-      padding-top: 5px;
-      padding-left: 5px;
-      // background-color: transparent;
-      background-color: #fff;
-      border-radius: 10rem;
-      text-decoration: none;
-
-      font-size: 3rem;
-      font-family: "Orbitron", sans-serif;
-      // color: #fff;
-      color: #7c9be2;
-      text-align: center;
-      text-transform: uppercase;
-      // border-bottom: 4px solid #fff;
-
-      grid-row: 9 / span 1;
-      grid-column: 4 / span 2;
-      align-self: end;
-      justify-self: center;
-
-      transition: all 0.2s;
-    }
+    filter: url(#shadow);
 
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-    }
-
-    &:hover &-icon {
-      transform: rotate(0deg);
-    }
-
-    &:active {
-      outline: none;
-      transform: translateY(-1px);
-      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-    }
-
-    &:active &-icon {
-      transform: rotate(0deg) translateY(-17px);
-    }
-
-    &-icon {
-      // height: 10%;
-      width: 32px;
-      padding-bottom: 5px;
-      // fill: #fff;
-      fill: #7c9be2;
-      transform: rotate(90deg);
-      transition: all 0.3s;
+      animation: floating 3s infinite ease-in-out;
     }
   }
 }
 
-.star {
-  &-1 {
-    animation: twinkle 0.75s alternate infinite;
-    animation-delay: 1s;
-  }
-
-  &-2 {
-    animation: twinkle 0.75s alternate infinite;
-    animation-delay: 1s;
-  }
-
-  &-3 {
-    animation: twinkle 0.75s alternate infinite;
-    animation-delay: 0.75s;
-  }
-
-  &-4 {
-    animation: twinkle 0.75s alternate infinite;
-    animation-delay: 0.5s;
-  }
-
-  &-5 {
-    animation: twinkle 0.75s alternate infinite;
-    animation-delay: 0s;
-  }
-
-  &-6 {
-    animation: twinkle 0.75s alternate infinite;
-    animation-delay: 0s;
-  }
-
-  &-7 {
-    animation: twinkle 0.75s alternate infinite;
-    animation-delay: 0.1s;
-  }
-
-  &-8 {
-    animation: twinkle 0.75s alternate infinite;
-    animation-delay: 0.2s;
-  }
-
-  &-9 {
-    animation: twinkle 0.75s alternate infinite;
-    animation-delay: 0.2s;
-  }
-
-  &-10 {
-    animation: twinkle 0.75s alternate infinite;
-    animation-delay: 0.5s;
-  }
-
-  &-11 {
-    animation: twinkle 0.75s alternate infinite;
-    animation-delay: 0.75s;
-  }
-
-  &-12 {
-    animation: twinkle 0.75s alternate infinite;
-    animation-delay: 0.25s;
-  }
-
-  &-13 {
-    animation: twinkle 0.75s alternate infinite;
-    animation-delay: 0.5s;
-  }
-
-  &-14 {
-    animation: twinkle 0.75s alternate infinite;
-    animation-delay: 0.75s;
-  }
-}
-
-.logo__rocketship {
-  top: 35%;
-  left: 43%;
-  transform: rotate(-25deg);
-  animation: orbit 10s cubic-bezier(0.42, 0.01, 0.68, 1.24) infinite;
-}

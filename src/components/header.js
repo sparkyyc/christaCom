@@ -6,7 +6,7 @@ import Lastname from "../assets/NasaSparks"
 import Stars1 from "../assets/stars/sharp-twinkle-group.svg"
 import Stars2 from "../assets/stars/mid-cross-group-filled.svg"
 
-import Planet from "../assets/planet/planet-6.svg"
+import Planet from "../assets/planet/planet-5.svg"
 import PlanetSwirl from "../assets/planet/planet-3.svg"
 
 import Astronaut from "../assets/astronauts/astro-9.svg"
@@ -31,10 +31,11 @@ class Header extends React.Component {
           </div>
         </div>
         <div className="background">
+          <Planet className="background__planet" />
           <Astronaut className="background__astro" />
-          <a href="#" className="background__button">
+          <a href="#" className="button">
           Blast off
-          <Rocket className="background__button-icon"/>
+          <Rocket className="button__icon"/>
           </a>
         </div>
       </div>
