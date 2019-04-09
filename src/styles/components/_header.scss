@@ -19,7 +19,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    // align-items: center;
     margin-top: 5%;
   }
 
@@ -28,10 +27,10 @@
     position: relative;
 
     height: 50%;
-    width: 50%;
+    width: 50vh;
     border-radius: 50%;
     display: inline-block;
-    padding-bottom: 50%;
+    padding-bottom: 50vh;
 
     box-shadow: 0 1.5rem 4rem rgba(#000, 0.4);
 
@@ -39,6 +38,8 @@
       // If want logo animation only on hover, copy code here
     }
   }
+
+
 
   &__rocketship {
     height: 27%;
@@ -224,28 +225,46 @@
   top: 0%;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 
   grid-template-rows: repeat(10, 10%);
-  grid-template-columns: repeat(8, 12.5%);
+  grid-template-columns: repeat(11, 1fr);
 
   &__planet {
-    width: 100%;
+    // width: 200%;
+    width: 60vh;
     height: auto;
     fill: $color-white;
+    filter: url(#shadowPlanet);
     
+    grid-column: 9 / -1;
+    grid-row: 1 / span 4;
+    align-self: start;
+    justify-self: end;
+    position: absolute;
+    top: -11%;
+    left: 5%;
   }
 
   &__astro {
     fill: $color-white;
-    height: 100%;
-    grid-row: 8 / -1;
-    grid-column: 2 / span 2;
-    justify-self: center;
-    filter: url(#shadow);
+    height: 90%;
+    grid-row: 7 / -1;
+    grid-column: 3 / span 3;
+    justify-self: start;
+    filter: url(#shadowAstro);
 
     &:hover {
+      filter: url(#shadowAstro);
       animation: floating 3s infinite ease-in-out;
     }
+  }
+
+  &__button {
+      grid-row: 9 / span 1;
+      grid-column: 5 / span 3;
+      align-self: start;
+      justify-self: center;
   }
 }
 

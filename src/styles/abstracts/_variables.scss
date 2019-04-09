@@ -1,5 +1,19 @@
 $color-black: #000;
 $color-white: #fff;
 
-$color-primary: #7c9be2;
-$color-secondary: pink;
+$color-primary-light: hsl(222, 40%, 69%);
+$color-primary: hsl(222, 64%, 69%);
+$color-primary-dark: hsl(222, 64%, 59%);
+
+$color-secondary-light: hsl(350, 56%, 88%);
+$color-secondary: hsl(350, 100%, 88%);
+$color-secondary-dark: hsl(350, 100%, 80%);
+
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-light-3: hsl(0, 0%, 88%);
+
+$color-grey-dark-1: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;

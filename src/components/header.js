@@ -33,7 +33,7 @@ class Header extends React.Component {
         <div className="background">
           <Planet className="background__planet" />
           <Astronaut className="background__astro" />
-          <a href="#" className="button">
+          <a href="#" className="button background__button">
           Blast off
           <Rocket className="button__icon"/>
           </a>

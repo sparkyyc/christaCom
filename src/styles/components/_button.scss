@@ -17,17 +17,12 @@
       font-size: 3rem;
       font-family: "Orbitron", sans-serif;
       // color: $color-white;
-      color: $color-primary;
+      color: $color-primary-dark;
       text-align: center;
       text-transform: uppercase;
       cursor: pointer;
       border: none;
       // border-bottom: 4px solid $color-white;
-
-      grid-row: 9 / span 1;
-      grid-column: 4 / span 2;
-      align-self: end;
-      justify-self: center;
 
       transition: all 0.2s;
       overflow: hidden;
@@ -53,12 +48,10 @@
     }
 
     &__icon {
-      // height: 10%;
-      width: 32px;
+      width: 3.2rem;
       padding-bottom: 5px;
-      // fill: #fff;
-      fill: #7c9be2;
-      transform: rotate(90deg);
+      fill: $color-primary-dark;
+      transform: rotate(90deg) translateX(-3px);
       transition: transform 0.3s, fill 0.18s;
     }
   }
