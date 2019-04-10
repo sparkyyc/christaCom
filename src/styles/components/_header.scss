@@ -4,7 +4,8 @@
   grid-column: 1 / -1;
   position: relative;
   background-image: linear-gradient(to top, rgba($color-primary, 0.7), rgba($color-secondary, 0.7)),
-    url(../images/galaxy-milkyway.jpg);
+    url(../images/galaxy-milkyway.jpg)
+    ;
   background-size: cover;
 }
 
