@@ -1,6 +1,57 @@
 .skills {
-    background-color: coral;
+  background-color: $color-grey-light-3;
 
-    grid-row: 3 / span 1;
-    grid-column: 1 / -1;
+  grid-row: 3 / span 1;
+  grid-column: 1 / -1;
+
+  position: relative;
+  // background: darken(#1a237e, 10%);
+  // background: $color-primary-dark;
+  background-image: linear-gradient(rgba($color-primary-dark, .8), rgba($color-primary-dark, .8)), url(../images/star-timelapse.jpg);
+  background-size: cover;
+  float: left;
+  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+
+  overflow: hidden;
+  
+
+  &__orbit {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    
+  }
+
+  &__background-robot {
+    position: absolute;
+    top: 18%;
+    left: 45%;
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+    // fill: rgba(33, 150, 243, 0.8);
+    fill: $color-white;
+  }
+
+  &__header {
+    color: $color-white;
+    font-size: 5rem;
+    text-align: center;
+    font-family: "Titillium Web", sans-serif;
+    letter-spacing: .4rem;
+    padding-top: 3rem;
+  }
+
+  &__info-box {
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    font-family: "Titillium Web", sans-serif;
+    
+  }
 }
+
