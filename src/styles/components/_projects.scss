@@ -1,24 +1,40 @@
 .projects {
-  background-color: $color-primary;
+  background-color: #444;
 
   grid-row: 4 / span 1;
   grid-column: 1 / -1;
 
   font-family: "Titillium Web", sans-serif;
+  overflow: hidden;
+
+  &__background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    // left: 25%;
+    // top: -5rem;
+    background-color: $color-grey-dark-3;
+    -webkit-mask-image: url(../images/planet-7.svg);
+    mask-image: url(../images/planet-7.svg);
+    mask-repeat: no-repeat;
+    overflow: hidden;
+  }
+
 }
 
 img {
   // max-width: 100%;
   //   width: 100%;
-  height: 100%;
+  height: 120%;
 }
 
 .projects__container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 100vh;
-  background: $color-primary-dark;
+//   background: #444;
+overflow: hidden;
 }
 
 .card {
@@ -39,13 +55,21 @@ img {
 
   &__line {
     opacity: 0;
-    animation: LineFadeIn 0.8s 0.8s forwards ease-in;
+    // animation: LineFadeIn 0.8s 0.8s forwards ease-in;
+
+    &-animated {
+      opacity: 0;
+      animation: LineFadeIn 0.8s 0.8s forwards ease-in;
+    }
   }
 
   &__image {
     opacity: 0;
-    animation: ImageFadeIn 0.8s 1.4s forwards;
-    
+
+    &-animated {
+      opacity: 0;
+      animation: ImageFadeIn 0.8s 1.4s forwards;
+    }
   }
 
   &__title {
@@ -60,8 +84,14 @@ img {
   &__content {
     margin-top: -1rem;
     opacity: 0;
-    animation: ContentFadeIn 0.8s 1.6s forwards;
-    height: 28vh
+    height: 28vh;
+
+    &-animated {
+      margin-top: -1rem;
+      opacity: 0;
+      height: 28vh;
+      animation: ContentFadeIn 0.8s 1.6s forwards;
+    }
   }
 
   &__svg {
@@ -76,38 +106,56 @@ img {
 
   &__footer {
     font-size: 3rem;
+    opacity: 0;
 
-    &-icon {
+    &-animated {
+        font-size: 3rem;
+        opacity: 0;
+        animation: ContentFadeIn 0.8s 1.6s forwards;
     }
   }
 }
 
 .btn-link {
-    &,
-    &:link,
-    &:visited {
-        display: inline-block;
-        transition: all .2s;
-    }
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    transition: all 0.2s;
+  }
 
-    &:hover {
-        color: $color-white;
-        transform: translateY(-2px);
-    }
+  &:hover {
+    color: $color-white;
+    transform: translateY(-2px);
+  }
 }
 
 .link {
-    &,
-    &:link,
-    &:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        color: inherit;
-        font-size: 1.6rem;
-    }
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.6rem;
+  }
 }
 
 #portfolio-1__img {
-    transform: translateX(-6rem);
-    -webkit-transform: translateX(-6rem);
+  transform: translateX(-6rem);
+  -webkit-transform: translateX(-6rem);
+}
+
+#agility__img{
+    transform: translate(-13rem, 0);
+  -webkit-transform: translate(-13rem, 0);
+
+  & img{
+      height: 116%;
+  }
+}
+
+#trigger1 {
+    position: absolute;
+    top: -12.5vh;
 }

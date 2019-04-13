@@ -1,9 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import SEO from "../components/seo"
 
-import About from "../components/About";
+import About from "../components/About"
 import Container from "../components/Container"
 import Header from "../components/Header"
 import Nav from "../components/Nav"
@@ -12,10 +13,21 @@ import Projects from "../components/Projects"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 
-
-import '../styles/main.scss'
+import "../styles/main.scss"
 
 const IndexPage = () => (
+  <div className="application">
+    
+    <Container>
+      <Header />
+      <Nav />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+    </Container>
+  </div>
   // <Layout>
   //   <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
   //   <h1>Hi people</h1>
@@ -26,15 +38,6 @@ const IndexPage = () => (
   //   </div>
   //   <Link to="/page-2/">Go to page 2</Link>
   // </Layout>
-  <Container>
-    <Header />
-    <Nav />
-    <About />
-    <Skills />
-    <Projects />
-    <Contact />
-    <Footer />
-  </Container>
 )
 
 export default IndexPage
