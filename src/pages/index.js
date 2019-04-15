@@ -20,12 +20,12 @@ const IndexPage = () => (
     
     <Container>
       <Header />
-      <Nav />
+      {/* <Nav /> */}
       <About />
       <Skills />
       <Projects />
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
     </Container>
   </div>
   // <Layout>

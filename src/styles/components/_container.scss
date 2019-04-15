@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-rows: 100vh 120vh 110vh 110vh 50vh 20vh;
+    grid-template-rows: 100vh 120vh 110vh 110vh 120vh;
     grid-template-columns: repeat(8, 1fr);
 
     overflow: hidden;
