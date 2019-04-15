@@ -12,7 +12,8 @@ export default (class Projects extends React.Component {
   render() {
     return (
       <div className="projects">
-      <div className="projects__background"></div>
+      <div className="projects__background1"></div>
+      <div className="projects__background2"></div>
         <div className="projects__container" id="projects">
           <Card
             title="This site"

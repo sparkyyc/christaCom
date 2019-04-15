@@ -7,25 +7,36 @@
   font-family: "Titillium Web", sans-serif;
   overflow: hidden;
 
-  &__background {
+  position: relative;
+
+  &__background1 {
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 90%;
     // left: 25%;
     // top: -5rem;
     background-color: $color-grey-dark-3;
-    -webkit-mask-image: url(../images/planet-7.svg);
-    mask-image: url(../images/planet-7.svg);
+    -webkit-mask-image: url(../images/Planets32.svg);
+    mask-image: url(../images/Planets32.svg);
     mask-repeat: no-repeat;
     overflow: hidden;
   }
 
-}
+  &__background2 {
+    position: absolute;
+    height: 50%;
+    width: 50%;
 
-img {
-  // max-width: 100%;
-  //   width: 100%;
-  height: 120%;
+    top: 45%;
+    left: 55%;
+    
+    background-color: $color-grey-dark-3;
+    -webkit-mask-image: url(../images/Astronaut1.svg);
+    mask-image: url(../images/Astronaut1.svg);
+    mask-repeat: no-repeat;
+    overflow: hidden;
+    transform: scaleX(-1);
+  }
 }
 
 .projects__container {
@@ -33,15 +44,16 @@ img {
   align-items: center;
   justify-content: space-evenly;
   height: 100vh;
-//   background: #444;
-overflow: hidden;
+  //   background: #444;
+  overflow: hidden;
 }
 
 .card {
   position: relative;
   background: #333;
   width: 400px;
-  height: 75vh;
+//   height: 75vh;
+    height: 520px;
   border-radius: 6px;
   padding: 2rem;
   color: #aaa;
@@ -50,7 +62,11 @@ overflow: hidden;
 
   &__image-container {
     margin: -2rem -2rem 1rem -2rem;
-    height: 40vh;
+    // height: 37.5vh;
+    height: 275px;
+    width: 400px;
+    // z-index: 8;
+    //  object-fit: cover;
   }
 
   &__line {
@@ -64,9 +80,11 @@ overflow: hidden;
   }
 
   &__image {
+    height: 100%;
     opacity: 0;
 
     &-animated {
+      height: 100%;
       opacity: 0;
       animation: ImageFadeIn 0.8s 1.4s forwards;
     }
@@ -77,7 +95,7 @@ overflow: hidden;
     margin-top: 0;
     font-weight: 800;
     letter-spacing: 0.01em;
-    font-size: 5rem;
+    font-size: 4rem;
     text-transform: uppercase;
   }
 
@@ -85,6 +103,7 @@ overflow: hidden;
     margin-top: -1rem;
     opacity: 0;
     height: 28vh;
+    // z-index: 10;
 
     &-animated {
       margin-top: -1rem;
@@ -97,7 +116,8 @@ overflow: hidden;
   &__svg {
     position: absolute;
     left: 0;
-    top: 115px;
+    top: 10%;
+    // z-index: 9;
   }
 
   &__text {
@@ -105,13 +125,16 @@ overflow: hidden;
   }
 
   &__footer {
+    position: absolute;
+    top: 90%;
+    left: 5%;
     font-size: 3rem;
     opacity: 0;
 
     &-animated {
-        font-size: 3rem;
-        opacity: 0;
-        animation: ContentFadeIn 0.8s 1.6s forwards;
+      font-size: 3rem;
+      opacity: 0;
+      animation: ContentFadeIn 0.8s 1.6s forwards;
     }
   }
 }
@@ -142,20 +165,16 @@ overflow: hidden;
 }
 
 #portfolio-1__img {
-  transform: translateX(-6rem);
-  -webkit-transform: translateX(-6rem);
+  //   transform: translateX(-6rem);
+  //   -webkit-transform: translateX(-6rem);
 }
 
-#agility__img{
-    transform: translate(-13rem, 0);
-  -webkit-transform: translate(-13rem, 0);
-
-  & img{
-      height: 116%;
-  }
+#agility__img {
+  transform: translate(-10rem, 0);
+  -webkit-transform: translate(-10rem, 0);
 }
 
 #trigger1 {
-    position: absolute;
-    top: -12.5vh;
+  position: absolute;
+  top: -12.5vh;
 }
