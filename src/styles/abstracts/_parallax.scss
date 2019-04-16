@@ -1,0 +1,48 @@
+.parallax {
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 110vh;
+//   position: relative;
+
+  &__projects {
+    height: 110vh;
+  }
+
+  &__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    // Formula for adjusting size difference created by translate z
+    // 1 + (translateZ * -1) / perspective
+
+    // Slower scroll element with higher Z value
+
+    &-base {
+        transform: translateZ(0);
+    }
+
+    &-back {
+        transform: translateZ(-1px) scale(2);
+    }
+
+    &-projects {
+        &-planet {
+            transform: translateZ(-2px) scale(3);
+        }
+
+        &-astro {
+            transform: translateZ(-1px) scale(2);
+        }
+    }
+  }
+
+  &__group {
+    position: relative;
+    // height: 100vh;
+    transform-style: preserve-3d;
+  }
+}

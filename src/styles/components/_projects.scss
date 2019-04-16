@@ -5,7 +5,7 @@
   grid-column: 1 / -1;
 
   font-family: "Titillium Web", sans-serif;
-  overflow: hidden;
+  // overflow: hidden;
 
   position: relative;
 
@@ -101,12 +101,14 @@
   &__content {
     margin-top: -1rem;
     opacity: 0;
+    // height: 360px;
     height: 28vh;
     // z-index: 10;
 
     &-animated {
       margin-top: -1rem;
       opacity: 0;
+      // height: 360px;
       height: 28vh;
       animation: ContentFadeIn 0.8s 1.6s forwards;
     }
