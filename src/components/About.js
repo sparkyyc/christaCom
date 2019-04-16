@@ -2,7 +2,9 @@ import React from "react"
 
 import Astro from "../assets/astronauts/astro-8.svg"
 import Astro2 from "../assets/astronauts/Astronaut16.svg"
-// 3 or 8
+
+import Planet from "../assets/planet/Planets9.svg"
+
 import Drip from "../assets/PaintSplatter-22.svg"
 import GalaxyPic from "../images/galaxy-milkyway.jpg"
 
@@ -11,6 +13,7 @@ export default () => (
     <div className="about__background" />
     <div className="about__header-drip" />
     <Astro2 className="about__astro" />
+    <Planet className="about__planet" />
     <div className="about__details">
         <div className="about__details-info">
       <h1 className="about__details-header">About</h1>
