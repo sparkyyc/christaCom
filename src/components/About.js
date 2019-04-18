@@ -3,7 +3,7 @@ import React from "react"
 import Astro from "../assets/astronauts/astro-8.svg"
 import Astro2 from "../assets/astronauts/Astronaut16.svg"
 
-import Planet from "../assets/planet/Planets9.svg"
+import Planet from "../assets/aliens/alien-3.svg"
 
 import Drip from "../assets/PaintSplatter-22.svg"
 import GalaxyPic from "../images/galaxy-milkyway.jpg"
