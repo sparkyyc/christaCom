@@ -8,7 +8,7 @@ export default () => (
   <div className="contact">
   <div className="contact__background1"></div>
     <div className="contact__form">
-      <form className="form" action="">
+      <form className="form" id="contact-form" method="post" action="mailto:christa.sparks.k@gmail.com">
       <h1 className="contact__header">Contact</h1>
         <div className="form__group">
           <input
@@ -44,11 +44,12 @@ export default () => (
           <label className="form__label" htmlFor="message">
             Message
           </label>
-          {/* <input className="form-message" name="message" type="text" /> */}
         </div>
 
         <div className="form__group">
-          <button className="button form__button">
+        {/* <input type="submit" value="Blast off" className="button form__button"/> */}
+        {/* <Rocket className="button__icon form__button-icon"/> */}
+          <button type="submit" className="button form__button">
           Blast off
           <Rocket className="button__icon form__button-icon"/>
           </button>
