@@ -1,20 +1,18 @@
 import React from "react"
-import ScrollMagic from "scrollmagic";
-
+import ScrollMagic from "scrollmagic"
 
 import Card from "./Card"
 import portPhoto from "../images/port-site-1.png"
 import agilityPhoto from "../images/agility.png"
 
 class Projects extends React.Component {
+
   render() {
     return (
-      <div className="projects" id="projectsTrigger">
-        <div className="parallaxBackground" id="parallaxProject">
-          <div className="projects__background1 layer1" />
-          <div className="projects__background2 layer2" />
-        </div>
-
+      <div className="projects">
+        <div className="projects__background1" />
+        <div className="projects__background2" />
+        <div id="trigger1" />
         <div className="projects__container" id="projects">
           <Card
             title="This site"

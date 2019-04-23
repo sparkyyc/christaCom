@@ -58,6 +58,17 @@
   color: #aaa;
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  opacity: 0;
+  
+  &-animated {
+    opacity: 0;
+    animation: moveInFromBottom 0.5s 0.5s forwards ease-in;
+  }
+
+  &-animated-out {
+    opacity: 1;
+    animation: moveOutToTop 0.8s 0.8s forwards ease-in;
+  }
 
   &__image-container {
     margin: -2rem -2rem 1rem -2rem;
