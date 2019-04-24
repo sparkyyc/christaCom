@@ -17,7 +17,9 @@ import "../styles/main.scss"
 
 const IndexPage = () => (
   <div className="application">
-    
+    <Helmet>
+    <script src={'ScrollMagic.min.js'}></script>
+    </Helmet>
     <Container>
       <Header />
       {/* <Nav /> */}

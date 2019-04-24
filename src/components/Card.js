@@ -1,66 +1,66 @@
 import React from "react"
-import ScrollMagic from "scrollmagic"
+// import ScrollM from "scrollmagic"
 class Card extends React.Component {
   constructor(props) {
     super(props)
-    this.controller = new ScrollMagic.Controller()
+    // this.controller = new ScrollM.Controller()
   }
 
   componentDidMount() {
-    const scrollDuration = 1000
-    new ScrollMagic.Scene({
-      triggerElement: "#trigger1",
-      duration: scrollDuration, // scroll distance
-      //   offset: 200 // start this scene after scrolling for 50px
-    })
-      .setClassToggle("#card-image", "card__image-animated")
-      //   .setPin("#myElement") // pins the element for the the scene's duration
-      .addTo(this.controller) // assign the scene to the controller
+    // const scrollDuration = 1000
+    // new ScrollM.Scene({
+    //   triggerElement: "#trigger1",
+    //   duration: scrollDuration, // scroll distance
+    //   //   offset: 200 // start this scene after scrolling for 50px
+    // })
+    //   .setClassToggle("#card-image", "card__image-animated")
+    //   //   .setPin("#myElement") // pins the element for the the scene's duration
+    //   .addTo(this.controller) // assign the scene to the controller
 
-    new ScrollMagic.Scene({
-      triggerElement: "#trigger1",
-      duration: scrollDuration, // scroll distance
-      //   offset: 200 // start this scene after scrolling for 50px
-    })
-      .setClassToggle("#card-line", "card__line-animated")
-      //   .setPin("#myElement") // pins the element for the the scene's duration
-      .addTo(this.controller) // assign the scene to the controller
+    // new ScrollM.Scene({
+    //   triggerElement: "#trigger1",
+    //   duration: scrollDuration, // scroll distance
+    //   //   offset: 200 // start this scene after scrolling for 50px
+    // })
+    //   .setClassToggle("#card-line", "card__line-animated")
+    //   //   .setPin("#myElement") // pins the element for the the scene's duration
+    //   .addTo(this.controller) // assign the scene to the controller
 
-    new ScrollMagic.Scene({
-      triggerElement: "#trigger1",
-      duration: scrollDuration, // scroll distance
-      //   offset: 200 // start this scene after scrolling for 50px
-    })
-      .setClassToggle("#card-content", "card__content-animated")
-      //   .setPin("#myElement") // pins the element for the the scene's duration
-      .addTo(this.controller) // assign the scene to the controller
+    // new ScrollM.Scene({
+    //   triggerElement: "#trigger1",
+    //   duration: scrollDuration, // scroll distance
+    //   //   offset: 200 // start this scene after scrolling for 50px
+    // })
+    //   .setClassToggle("#card-content", "card__content-animated")
+    //   //   .setPin("#myElement") // pins the element for the the scene's duration
+    //   .addTo(this.controller) // assign the scene to the controller
 
-    new ScrollMagic.Scene({
-      triggerElement: "#trigger1",
-      duration: scrollDuration, // scroll distance
-      //   offset: 200 // start this scene after scrolling for 50px
-    })
-      .setClassToggle("#card-footer", "card__footer-animated")
-      //   .setPin("#myElement") // pins the element for the the scene's duration
-      .addTo(this.controller) // assign the scene to the controller
+    // new ScrollM.Scene({
+    //   triggerElement: "#trigger1",
+    //   duration: scrollDuration, // scroll distance
+    //   //   offset: 200 // start this scene after scrolling for 50px
+    // })
+    //   .setClassToggle("#card-footer", "card__footer-animated")
+    //   //   .setPin("#myElement") // pins the element for the the scene's duration
+    //   .addTo(this.controller) // assign the scene to the controller
 
-      new ScrollMagic.Scene({
-        triggerElement: "#trigger1",
-        duration: scrollDuration, // scroll distance
-        //   offset: 200 // start this scene after scrolling for 50px
-      })
-        .setClassToggle("#card", "card-animated")
-        //   .setPin("#myElement") // pins the element for the the scene's duration
-        .addTo(this.controller) // assign the scene to the controller
+    //   new ScrollM.Scene({
+    //     triggerElement: "#trigger1",
+    //     duration: scrollDuration, // scroll distance
+    //     //   offset: 200 // start this scene after scrolling for 50px
+    //   })
+    //     .setClassToggle("#card", "card-animated")
+    //     //   .setPin("#myElement") // pins the element for the the scene's duration
+    //     .addTo(this.controller) // assign the scene to the controller
 
-        new ScrollMagic.Scene({
-          triggerElement: "#trigger1",
-          duration: scrollDuration, // scroll distance
-            offset: 600 // start this scene after scrolling for 50px
-        })
-          .setClassToggle("#card", "card-animated-out")
-          //   .setPin("#myElement") // pins the element for the the scene's duration
-          .addTo(this.controller) // assign the scene to the controller
+    //     new ScrollM.Scene({
+    //       triggerElement: "#trigger1",
+    //       duration: scrollDuration, // scroll distance
+    //         offset: 600 // start this scene after scrolling for 50px
+    //     })
+    //       .setClassToggle("#card", "card-animated-out")
+    //       //   .setPin("#myElement") // pins the element for the the scene's duration
+    //       .addTo(this.controller) // assign the scene to the controller
     
   }
 
@@ -73,7 +73,7 @@ class Card extends React.Component {
       gh = (
         <div className="btn-link">
           <i className="card__footer-icon fab fa-github" />
-          <a href={this.props.github} target="_blank" className="link">
+          <a href={this.props.github} target="_blank" rel="noopener noreferrer" className="link">
             /sparkyyc
           </a>
         </div>
@@ -86,7 +86,7 @@ class Card extends React.Component {
       video = (
         <div className="btn-link">
           <i className="card__footer-icon fas fa-video" />
-          <a href={this.props.video} target="_blank" className="link">
+          <a href={this.props.video} target="_blank" rel="noopener noreferrer" className="link">
             demo video
           </a>
         </div>
@@ -99,7 +99,7 @@ class Card extends React.Component {
       site = (
         <div className="btn-link">
           <i className="card__footer-icon fas fa-link" />
-          <a href={this.props.site} target="_blank" className="link">
+          <a href={this.props.site} target="_blank" rel="noopener noreferrer" className="link">
             live site
           </a>
         </div>

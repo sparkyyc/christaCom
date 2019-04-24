@@ -1,5 +1,4 @@
 import React from "react"
-import ScrollMagic from "scrollmagic"
 
 import Card from "./Card"
 import portPhoto from "../images/port-site-1.png"
