@@ -266,7 +266,7 @@
     fill: $color-white;
     height: 90%;
     grid-row: 7 / -1;
-    grid-column: 3 / span 3;
+    grid-column: 2 / span 3;
     justify-self: start;
     filter: url(#shadowAstro);
 
@@ -275,11 +275,17 @@
       animation: floating 3s infinite ease-in-out;
     }
 
+    @include respond(tab-land){
+      grid-row: 7 / span 3;
+      grid-column: 2 / span 3;
+    }
+
     @include respond(phone){
       grid-row: 6 / span 2;
       grid-column: 3 / span 3;
       filter: none;
     }
+    
   }
 
   &__button {
