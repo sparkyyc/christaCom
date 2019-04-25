@@ -13,14 +13,14 @@ class Skills extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { screenText: "Here are a few of the technologies I know, click them to learn more.", clicked: "" }
+    this.state = { screenText: "Here are a few of the technologies I know, click them to learn more.", clicked: "Christa" }
   }
 
   onClick = (value) => {
     switch (value) {
       case "main":
       this.setState({ screenText: "Here are a few of the technologies I know, click them to learn more.", 
-    clicked: "" })
+    clicked: "Christa" })
         break
       case "github":
         this.setState({ screenText: "Check out my github(linked at the footer of my site), you can find the code to this website there.", clicked: "Github" })
@@ -80,7 +80,7 @@ class Skills extends React.Component {
         </div>
         <div className="skills__orbit">
           <ul className="orbit-wrap">
-            <li className="orbit-center" value="main" onClick={this.onClick}>
+            <li className="orbit-center" value="main" onClick={() => this.onClick("main")}>
               <i className="orbit-center__icon fa fa-code" />
             </li>
 

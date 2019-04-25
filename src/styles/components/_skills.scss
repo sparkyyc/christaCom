@@ -11,7 +11,6 @@
   min-height: 100vh;
 
   overflow: hidden;
-  
 
   &__orbit {
     position: absolute;
@@ -20,17 +19,10 @@
     height: 100%;
     width: 50%;
     
-  }
-
-  &__background-robot {
-    position: absolute;
-    top: 18%;
-    left: 45%;
-    height: 100%;
-    width: 100%;
-    transform: scale(1);
-    // fill: rgba(33, 150, 243, 0.8);
-    fill: $color-white;
+    @include respond(tab-port) {
+      left: 25%;
+      top: -20%;
+    }
   }
 
   &__header {
@@ -40,14 +32,28 @@
     font-family: "Titillium Web", sans-serif;
     letter-spacing: .4rem;
     padding-top: 3rem;
+    width: 100%;
   }
 
   &__info-box {
     position: absolute;
     top: 30%;
     left: 8%;
+    // width: 30%;
+    // height: 40%;
     font-family: "Titillium Web", sans-serif;
+
+    @include respond(tab-port) {
+      left: 50%;
+      top: 67%;
+      margin-top: -140px;
+      margin-left: -240px;
+    }
     
+    @include respond(big-desktop) {
+      left: 20%;
+      top: 35%;
+    }
   }
 }
 

@@ -123,7 +123,7 @@ ul[class^="ring"] {
   height: 8rem;
   line-height: 9rem;
   text-align: center;
-  background: $color-secondary-dark;
+  background: $color-comp-green;
   border-radius: 50%;
 
   &:hover .orbit-center__icon {
@@ -145,23 +145,7 @@ ul[class^="ring"] {
 /* 
 animations 
 */
-@keyframes clockwiseRotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@keyframes counterClockwiseRotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
 
 /* 
 icons 
