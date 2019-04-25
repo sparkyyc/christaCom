@@ -33,11 +33,18 @@ class Header extends React.Component {
         <div className="background">
           <Planet className="background__planet" />
           <Astronaut className="background__astro" />
-          <a href="#" className="button background__button">
+          {/* <a href="#" className="button background__button">
           Blast off
           <Rocket className="button__icon"/>
-          </a>
+          </a> */}
+          <div className="background__text">
+          <p className="background__text-heading">Hello, I'm Christa.</p>
+          <p className="background__text-sub">
+            A full-stack developer who loves to code outrageous things.
+          </p>
         </div>
+        </div>
+        
       </div>
     )
   }
