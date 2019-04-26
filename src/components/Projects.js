@@ -36,6 +36,7 @@ class Projects extends React.Component {
       className="portfolio-1__img"
       github="https://github.com/sparkyyc/christaCom"
       animated={animated[0]}
+      key="1"
     />,
       <Card
       title="Agility"
@@ -44,6 +45,7 @@ class Projects extends React.Component {
       className="agility__img"
       github="https://github.com/sparkyyc/Agility"
       animated={animated[1]}
+      key="2"
     />,
     <Card 
       title="MAPLabs"
@@ -51,6 +53,7 @@ class Projects extends React.Component {
       img={maplabsPhoto}
       className="maplabs__img"
       animated={animated[2]}
+      key="3"
     />
     ]
     return (
