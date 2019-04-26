@@ -113,7 +113,7 @@ class Card extends React.Component {
         <div id="trigger1" />
         <div className="card__image-container" id={this.props.className}>
           <img
-            className="card__image"
+            className={this.props.animated ? "card__image-animated" : "card__image"}
             id="card-image"
             src={this.props.img}
             alt=""
@@ -126,7 +126,7 @@ class Card extends React.Component {
             fill="#333"
           />
           <path
-            className="card__line"
+            className={this.props.animated ? "card__line-animated" : "card__line"}
             id="card-line"
             d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400"
             stroke="pink"
@@ -135,11 +135,11 @@ class Card extends React.Component {
           />
         </svg>
 
-        <div className="card__content" id="card-content">
+        <div className={this.props.animated ? "card__content-animated" : "card__content"} id="card-content">
           <h1 className="card__title">{this.props.title}</h1>
           <p className="card__text">{this.props.text}</p>
         </div>
-        <div className="card__footer" id="card-footer">
+        <div className={this.props.animated ? "card__footer-animated" : "card__footer"} id="card-footer">
           {gh}
           {video}
           {site}

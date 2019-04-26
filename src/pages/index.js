@@ -19,14 +19,14 @@ const IndexPage = () => (
   <div className="application">
     <Helmet>
       <script src={"ScrollMagic.min.js"} />
-      <script type="text/javascript">
+      {/* <script type="text/javascript">
         {document.body.classList.add("js-loading")}
       </script>
       <script type="text/javascript">
         {window.addEventListener("load", () => {
           document.body.classList.remove("js-loading")
         })}
-      </script>
+      </script> */}
     </Helmet>
     <Container>
       <Header />
