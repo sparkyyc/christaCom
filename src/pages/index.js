@@ -17,8 +17,8 @@ import "../styles/main.scss"
 
 const IndexPage = () => (
   <div className="application">
-    <Helmet>
-      <script src={"ScrollMagic.min.js"} />
+    {/* <Helmet> */}
+      {/* <script src={"ScrollMagic.min.js"} /> */}
       {/* <script type="text/javascript">
         {document.body.classList.add("js-loading")}
       </script>
@@ -27,7 +27,7 @@ const IndexPage = () => (
           document.body.classList.remove("js-loading")
         })}
       </script> */}
-    </Helmet>
+    {/* </Helmet> */}
     <Container>
       <Header />
       {/* <Nav /> */}
