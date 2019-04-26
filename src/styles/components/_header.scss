@@ -3,9 +3,12 @@
   grid-row: 1 / span 1;
   grid-column: 1 / -1;
   position: relative;
-  background-image: linear-gradient(to top, rgba($color-primary, 0.7), rgba($color-secondary, 0.7)),
-    url(../images/galaxy-milkyway.jpg)
-    ;
+  background-image: linear-gradient(
+      to top,
+      rgba($color-primary, 0.7),
+      rgba($color-secondary, 0.7)
+    ),
+    url(../images/galaxy-milkyway.jpg);
   background-size: cover;
   background-position: center bottom;
 }
@@ -15,7 +18,6 @@
 .logo {
   height: 100vh;
   width: 100vw;
-  
 
   &__container {
     height: 100%;
@@ -42,8 +44,6 @@
       // If want logo animation only on hover, copy code here
     }
   }
-
-
 
   &__rocketship {
     height: 27%;
@@ -143,84 +143,83 @@
 // LOGO ANIMATIONS
 
 .star {
-    &-1 {
-      animation: twinkle 0.75s alternate infinite;
-      animation-delay: 1s;
-    }
-  
-    &-2 {
-      animation: twinkle 0.75s alternate infinite;
-      animation-delay: 1s;
-    }
-  
-    &-3 {
-      animation: twinkle 0.75s alternate infinite;
-      animation-delay: 0.75s;
-    }
-  
-    &-4 {
-      animation: twinkle 0.75s alternate infinite;
-      animation-delay: 0.5s;
-    }
-  
-    &-5 {
-      animation: twinkle 0.75s alternate infinite;
-      animation-delay: 0s;
-    }
-  
-    &-6 {
-      animation: twinkle 0.75s alternate infinite;
-      animation-delay: 0s;
-    }
-  
-    &-7 {
-      animation: twinkle 0.75s alternate infinite;
-      animation-delay: 0.1s;
-    }
-  
-    &-8 {
-      animation: twinkle 0.75s alternate infinite;
-      animation-delay: 0.2s;
-    }
-  
-    &-9 {
-      animation: twinkle 0.75s alternate infinite;
-      animation-delay: 0.2s;
-    }
-  
-    &-10 {
-      animation: twinkle 0.75s alternate infinite;
-      animation-delay: 0.5s;
-    }
-  
-    &-11 {
-      animation: twinkle 0.75s alternate infinite;
-      animation-delay: 0.75s;
-    }
-  
-    &-12 {
-      animation: twinkle 0.75s alternate infinite;
-      animation-delay: 0.25s;
-    }
-  
-    &-13 {
-      animation: twinkle 0.75s alternate infinite;
-      animation-delay: 0.5s;
-    }
-  
-    &-14 {
-      animation: twinkle 0.75s alternate infinite;
-      animation-delay: 0.75s;
-    }
+  &-1 {
+    animation: twinkle 0.75s alternate infinite;
+    animation-delay: 1s;
   }
-  
-  .logo__rocketship {
-    top: 35%;
-    left: 43%;
-    //   transform: rotate(-25deg);
-    animation: orbit 10s cubic-bezier(0.42, 0.01, 0.68, 1.24) infinite;
+
+  &-2 {
+    animation: twinkle 0.75s alternate infinite;
+    animation-delay: 1s;
   }
-  
+
+  &-3 {
+    animation: twinkle 0.75s alternate infinite;
+    animation-delay: 0.75s;
+  }
+
+  &-4 {
+    animation: twinkle 0.75s alternate infinite;
+    animation-delay: 0.5s;
+  }
+
+  &-5 {
+    animation: twinkle 0.75s alternate infinite;
+    animation-delay: 0s;
+  }
+
+  &-6 {
+    animation: twinkle 0.75s alternate infinite;
+    animation-delay: 0s;
+  }
+
+  &-7 {
+    animation: twinkle 0.75s alternate infinite;
+    animation-delay: 0.1s;
+  }
+
+  &-8 {
+    animation: twinkle 0.75s alternate infinite;
+    animation-delay: 0.2s;
+  }
+
+  &-9 {
+    animation: twinkle 0.75s alternate infinite;
+    animation-delay: 0.2s;
+  }
+
+  &-10 {
+    animation: twinkle 0.75s alternate infinite;
+    animation-delay: 0.5s;
+  }
+
+  &-11 {
+    animation: twinkle 0.75s alternate infinite;
+    animation-delay: 0.75s;
+  }
+
+  &-12 {
+    animation: twinkle 0.75s alternate infinite;
+    animation-delay: 0.25s;
+  }
+
+  &-13 {
+    animation: twinkle 0.75s alternate infinite;
+    animation-delay: 0.5s;
+  }
+
+  &-14 {
+    animation: twinkle 0.75s alternate infinite;
+    animation-delay: 0.75s;
+  }
+}
+
+.logo__rocketship {
+  top: 35%;
+  left: 43%;
+  //   transform: rotate(-25deg);
+  animation: orbit 10s cubic-bezier(0.42, 0.01, 0.68, 1.24) infinite;
+}
 
 // BACKGROUND OF HEADER
 .background {
@@ -241,7 +240,7 @@
     height: auto;
     fill: $color-white;
     filter: url(#shadowPlanet);
-    
+
     grid-column: 9 / -1;
     grid-row: 1 / span 4;
     align-self: start;
@@ -275,24 +274,27 @@
       animation: floating 3s infinite ease-in-out;
     }
 
-    @include respond(tab-land){
+    @include respond(tab-land) {
       grid-row: 7 / span 3;
-      grid-column: 2 / span 3;
+      grid-column: 1 / span 3;
+      justify-self: end;
     }
 
-    @include respond(phone){
+    @include respond(phone) {
       grid-row: 6 / span 2;
-      grid-column: 3 / span 3;
+      grid-column: 2 / span 3;
+      justify-self: start;
+      align-self: start;
+      transform: translateY(-15px);
       filter: none;
     }
-    
   }
 
   &__button {
-      grid-row: 9 / span 1;
-      grid-column: 5 / span 3;
-      align-self: start;
-      justify-self: center;
+    grid-row: 9 / span 1;
+    grid-column: 5 / span 3;
+    align-self: start;
+    justify-self: center;
   }
 
   &__text {
@@ -300,10 +302,10 @@
     width: 52rem;
     position: absolute;
     left: 50%;
-    top: 75%;
+    top: 73%;
     margin-top: -5rem;
     margin-left: -26rem;
-    @include respond(phone){
+    @include respond(phone) {
       width: 40rem;
       margin-left: -20rem;
     }
@@ -312,18 +314,85 @@
     animation: textShadow 2s ease-in-out;
     text-align: center;
 
-    &:hover{
-      animation: textShadow 1.5s ease-in-out infinite;
-    }
-
     &-heading {
       font-size: 4rem;
-      // animation: textShadow 1.5s ease-in-out;
     }
 
     &-sub {
       font-size: 2rem;
-    }
-}
-}
 
+      &:hover {
+        animation: textShadow 1.5s ease-in-out infinite;
+      }
+    }
+  }
+
+  &__links {
+    display: inline-block;
+
+    &:first-child {
+      padding-left: 1rem;
+    }
+
+    &-icon {
+      color: $color-white;
+      font-size: 2.75rem;
+      margin: 0 .5rem;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: translateY(-2px);
+        text-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+      }
+
+      &:active {
+        outline: none;
+        transform: translateY(-1px);
+        text-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+      }
+    }
+  }
+
+  &__scroll-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    height: 9rem;
+    width: 11.6rem;
+    margin-top: -4.5rem;
+    margin-left: -5.8rem;
+
+    & a {
+      z-index: 2;
+      display: inline-block;
+      transform: translate(0, -50%);
+      color: #fff;
+      letter-spacing: .1em;
+      text-decoration: none;
+      transition: opacity .3s;
+      font-family: "Titillium Web", sans-serif;
+      font-size: 2rem;
+
+      padding-top: 70px;
+
+      &:hover {
+        opacity: .5;
+      }
+
+      & span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        transform: rotateZ(-45deg);
+        animation: scrollSpin 1.5s infinite;
+        box-sizing: border-box;
+      }
+    }
+  }
+  
+}

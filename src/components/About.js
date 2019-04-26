@@ -10,19 +10,20 @@ import GalaxyPic from "../images/galaxy-milkyway.jpg"
 
 export default () => (
   <div className="about">
+    <div id="about-start" />
     <div className="about__background" />
     <div className="about__header-drip" />
     <Astro2 className="about__astro" />
     {/* <Planet className="about__planet" /> */}
     <div className="about__details">
-        <div className="about__details-info">
-      <h1 className="about__details-header">About</h1>
-      <p className="about__details-text">
-        I'm Christa Sparks, a Full Stack web developer who loves to explore and
-        experiment with technologies of all sorts. I'm always excited to learn
-        new things. I'm probably working on a new wacky site for fun right
-        now.
-      </p>
+      <div className="about__details-info">
+        <h1 className="about__details-header">About</h1>
+        <p className="about__details-text">
+          I'm Christa Sparks, a Full Stack web developer who loves to explore
+          and experiment with technologies of all sorts. I'm always excited to
+          learn new things. I'm probably working on a new wacky site for fun
+          right now.
+        </p>
       </div>
     </div>
   </div>

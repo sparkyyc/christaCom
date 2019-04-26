@@ -33,18 +33,38 @@ class Header extends React.Component {
         <div className="background">
           <Planet className="background__planet" />
           <Astronaut className="background__astro" />
-          {/* <a href="#" className="button background__button">
-          Blast off
-          <Rocket className="button__icon"/>
-          </a> */}
           <div className="background__text">
-          <p className="background__text-heading">Hello, I'm Christa.</p>
-          <p className="background__text-sub">
-            A full-stack developer who loves to code outrageous things.
-          </p>
+            <div className="background__text-heading">
+              Hello, I'm Christa.
+              <div className="background__links">
+                <a
+                  href="https://github.com/sparkyyc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="background__link"
+                >
+                  <i className="background__links-icon icon fab fa-github" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/christa-sparks/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="background__link"
+                >
+                  <i className="background__links-icon icon fab fa-linkedin-in" />
+                </a>
+              </div>
+            </div>
+            <p className="background__text-sub">
+              A full-stack developer who loves to code outrageous things.
+            </p>
+          </div>
+          <div className="background__scroll-indicator">
+            <a href="#about-start">
+              <span />Scroll
+            </a>
+          </div>
         </div>
-        </div>
-        
       </div>
     )
   }

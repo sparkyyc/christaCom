@@ -14,40 +14,31 @@ import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 
 import "../styles/main.scss"
+class IndexPage extends React.Component {
+  componentDidMount() {
+    document.body.classList.add("js-loading")
+    window.addEventListener("load", () => {
+      document.body.classList.remove("js-loading")
+    })
+  }
 
-const IndexPage = () => (
-  <div className="application">
-    {/* <Helmet> */}
-      {/* <script src={"ScrollMagic.min.js"} /> */}
-      {/* <script type="text/javascript">
-        {document.body.classList.add("js-loading")}
-      </script>
-      <script type="text/javascript">
-        {window.addEventListener("load", () => {
-          document.body.classList.remove("js-loading")
-        })}
-      </script> */}
-    {/* </Helmet> */}
+  render() {
+    return (
+      <div className="application">
+    {/* TODO: Comment out helmet for deployment */}
+    <Helmet>
+      <script src={"ScrollMagic.min.js"} />
+    </Helmet>
     <Container>
       <Header />
-      {/* <Nav /> */}
       <About />
       <Skills />
       <Projects />
       <Contact />
-      {/* <Footer /> */}
     </Container>
   </div>
-  // <Layout>
-  //   <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-  //   <h1>Hi people</h1>
-  //   <p>Welcome to your new Gatsby site.</p>
-  //   <p>Now go build something great.</p>
-  //   <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-  //     <Image />
-  //   </div>
-  //   <Link to="/page-2/">Go to page 2</Link>
-  // </Layout>
-)
+    )
+  }
+}
 
 export default IndexPage
