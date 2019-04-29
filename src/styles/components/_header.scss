@@ -316,6 +316,10 @@
 
     &-heading {
       font-size: 4rem;
+
+      @include respond(phone) {
+        font-size: 3.5rem;
+      }
     }
 
     &-sub {
@@ -361,6 +365,10 @@
     width: 11.6rem;
     margin-top: -4.5rem;
     margin-left: -5.8rem;
+
+    @include respond(phone) {
+      left: 55%;
+    }
 
     & a {
       z-index: 2;
