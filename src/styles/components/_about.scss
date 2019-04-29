@@ -4,7 +4,7 @@
 
   display: grid;
   grid-template-rows: repeat(8, 12.5%);
-  grid-template-columns: repeat(5, 15%) 1fr;
+  grid-template-columns: repeat(8, 12.5%);
 
   position: relative;
   overflow: hidden;
@@ -41,7 +41,7 @@
     -webkit-mask-image: url(../images/PaintSplatter-22.svg);
     mask-image: url(../images/PaintSplatter-22.svg);
     mask-repeat: no-repeat;
-    mask-size: 123%;
+    mask-size: 124%;
   }
 
   &__background {
@@ -70,6 +70,12 @@
     // overflow: visible;
     // transform: scale(2);
     // margin-left: 10%;
+
+    @include respond(phone) {
+      height: 300px;
+      width: 300px;
+      grid-row: 6 / span 2;
+    }
   }
 
   &__planet {
@@ -84,37 +90,60 @@
   }
 
   &__details {
-    grid-row: 5 / span 4;
-    grid-column: 3 / span 2;
+    height: 100%;
+    width: 100%;
+    grid-row: 3 / span 5;
+    grid-column: 3 / span 5;
     font-family: "Titillium Web", sans-serif;
     z-index: 20;
     padding: 2rem 2rem;
-    // background-color: rgba($color-secondary, .95);
-    // background-image: linear-gradient(
-    //   to bottom right,
-    //   $color-primary,
-    //   $color-secondary
-    // );
-    $border: 10px;
     background: linear-gradient(to bottom right,
-    $color-primary,
-    $color-secondary);
-    // border: solid $border transparent;
-    border-radius: 30px;
+    rgba($color-primary, 0.5),
+    rgba($color-secondary, 0.5));
+    border-radius: 5px;
     align-self: start;
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
     position: relative;
     background-clip: padding-box; 
 
-    // display: flex;
+    @include respond(tab-port) {
+      grid-row: 3 / span 5;
+      grid-column: 2 / span 6;
+    }
+
+    @include respond(phone) {
+      grid-row: 2 / span 6;
+      grid-column: 1 / -1;
+      width: 90%;
+      justify-self: center;
+      background: linear-gradient(to bottom right,
+      rgba($color-primary, 0.2),
+      rgba($color-secondary, 0.2));
+      overflow: hidden;
+    }
+
+    @include respond(big-desktop) {
+      grid-row: 3 /span 4;
+      grid-column: 3 / span 4;
+    }
+
+   &-info {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    @include respond(phone) {
+      // flex-direction: column
+    }
+   }
     // align-items: center;
     
 
     &::before {
       content: "";
-      height: 95%;
-      width: 95%;
+      height: 97%;
+      width: 97%;
       position: absolute;
       top: 0;
       left: 0;
@@ -123,21 +152,137 @@
       margin: auto;
       z-index: -1;
       border-radius: inherit; /* !importanté */
-      background: $color-white;
+      background: rgba($color-white, 0.7);
+
+      @include respond(phone) {
+        background: rgba($color-white, 0.5);
+      }
     }
 
     &-header {
+      flex-basis: 100%;
       font-size: 5rem;
       text-align: center;
+      color: $color-grey-dark-3;
       //   text-decoration: underline;
       //   text-decoration-color: $color-secondary-dark;
       text-decoration: none;
       // border-bottom: 10px solid $color-secondary-dark;
+
+      @include respond(phone) {
+        order: 1;
+      }
+      
+    }
+
+    &-sub {
+      flex-basis: 100%;
+      text-align: center;
+      font-size: 2rem;
+      color: $color-grey-dark-2;
       margin-bottom: 2.5rem;
+
+      @include respond(phone) {
+        order: 2;
+      }
     }
 
     &-text {
-      font-size: 2rem;
+      flex-basis: 45%;
+      width: 40%;
+      color: $color-grey-dark-3;
+      font-size: 1.6rem;
+
+      &-1 {
+        margin-top: 2rem;
+
+        @include respond(tab-land) {
+          margin-top: 0rem;
+        }
+
+        @include respond(phone) {
+          flex-basis: 95%;
+          margin-left: 5%;
+          margin-top: 1rem;
+          order: 3;
+        }
+
+        @include respond(big-desktop) {
+          
+        }
+      }
+
+      &-2 {
+        margin-left: 5%;
+
+        @include respond(tab-land) {
+          margin-top: 2rem;
+        }
+
+        @include respond(tab-port) {
+          margin-top: 5rem;
+        }
+
+        @include respond(phone) {
+          flex-basis: 95%;
+          margin-top: 2rem;
+          order: 4;
+        }
+
+        @include respond(big-desktop) {
+          margin-left: 20%;
+          margin-top: 3rem;
+        }
+      }
+    }
+
+    &-robo1 {
+      height: 200px;
+      fill: $color-grey-dark-3;
+      flex-basis: 50%;
+
+      @include respond(tab-land) {
+        margin-top: -1.5rem;
+      }
+
+      @include respond(phone) {
+        // display: none;
+        order: 5;
+        margin-left: 25%;
+        margin-top: 4%;
+        flex-basis: 100%;
+      }
+
+      @include respond(big-desktop) {
+          flex-basis: 30%;
+          margin-left: 15%;
+          margin-right: -6.5rem;
+      }
+    }
+
+    &-robo2 {
+      height: 150px;
+      fill: $color-grey-dark-3;
+      flex-basis: 50%;
+      margin-top: -1rem;
+
+      @include respond(tab-land) {
+        margin-top: 2rem;
+      }
+
+      @include respond(tab-port) {
+        margin-top: 6rem;
+      }
+
+      @include respond(phone) {
+        display: none;
+        order: 6;
+      }
+
+      @include respond(big-desktop) {
+          flex-basis: 20%;
+          margin-top: 3rem;
+      }
     }
   }
 }
