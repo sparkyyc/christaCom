@@ -91,6 +91,7 @@
 
   &__details {
     height: 100%;
+    max-height: 55rem;
     width: 100%;
     grid-row: 3 / span 5;
     grid-column: 3 / span 5;
@@ -125,7 +126,8 @@
 
     @include respond(big-desktop) {
       grid-row: 3 /span 4;
-      grid-column: 3 / span 4;
+      grid-column: 3 / span 3;
+      max-width: 900px;
     }
 
    &-info {
@@ -208,7 +210,7 @@
         }
 
         @include respond(big-desktop) {
-          
+          flex-basis: 60%;
         }
       }
 
@@ -230,7 +232,8 @@
         }
 
         @include respond(big-desktop) {
-          margin-left: 20%;
+          // margin-left: 20%;
+          flex-basis: 60%;
           margin-top: 3rem;
         }
       }
@@ -254,8 +257,8 @@
       }
 
       @include respond(big-desktop) {
-          flex-basis: 30%;
-          margin-left: 15%;
+          // flex-basis: 30%;
+          // margin-left: 10%;
           margin-right: -6.5rem;
       }
     }
@@ -280,7 +283,7 @@
       }
 
       @include respond(big-desktop) {
-          flex-basis: 20%;
+          flex-basis: 30%;
           margin-top: 3rem;
       }
     }

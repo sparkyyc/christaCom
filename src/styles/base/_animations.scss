@@ -225,3 +225,42 @@
     opacity: 0;
   }
 }
+
+// @keyframes glitch-anim {
+//   0% {
+//     clip: rect(70px, 450px, 76px, 0);
+//   }
+//   20% {
+//     clip: rect(29px, 450px, 16px, 0);
+//   }
+//   40% {
+//     clip: rect(76px, 450px, 3px, 0);
+//   }
+//   60% {
+//     clip: rect(42px, 450px, 78px, 0);
+//   }
+//   80% {
+//     clip: rect(15px, 450px, 13px, 0);
+//   }
+//   100% {
+//     clip: rect(53px, 450px, 5px, 0);
+//   }
+// }
+
+// @keyframes glitch-anim-1 {
+//   $steps: 10;
+//   @for $i from 0 through $steps {
+//     #{percentage($i*(1/$steps))} {
+//       clip: rect(random(350)+px, 9999px, random(350)+px, 0);
+//     }
+//   }
+// }
+
+// @keyframes glitch-anim-2 {
+//   $steps: 10;
+//   @for $i from 0 through $steps {
+//     #{percentage($i*(1/$steps))} {
+//       clip: rect(random(350)+px, 9999px, random(350)+px, 0);
+//     }
+//   }
+// }

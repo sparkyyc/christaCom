@@ -18,13 +18,14 @@ export default () => (
       >
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="contact" />
-        <h1 className="contact__header">Contact</h1>
+        <h1 className="contact__header">Contact Me</h1>
+        <h4 className="contact__sub">For a job, your next project, or just to say hello.</h4>
         <div className="form__group">
           <input
             className="form__input"
             name="name"
             type="text"
-            placeholder="Name"
+            placeholder="What's your name?"
           />
           <label className="form__label" htmlFor="name">
             Name
@@ -36,7 +37,7 @@ export default () => (
             className="form__input"
             name="email"
             type="email"
-            placeholder="Email"
+            placeholder="What's a good email for you?"
           />
           <label className="form__label" htmlFor="email">
             Email
@@ -48,16 +49,14 @@ export default () => (
             className="form__input"
             name="message"
             id="contact-message"
-            placeholder="Message"
+            placeholder="Leave me a message here!"
           />
           <label className="form__label" htmlFor="message">
             Message
           </label>
         </div>
 
-        <div className="form__group">
-          {/* <input type="submit" value="Blast off" className="button form__button"/> */}
-          {/* <Rocket className="button__icon form__button-icon"/> */}
+        <div className="form__group form__button-container">
           <button type="submit" className="button form__button">
             Blast off
             <Rocket className="button__icon form__button-icon" />

@@ -28,18 +28,66 @@
 
   &__header {
     font-size: 4rem;
+    letter-spacing: .2rem;
+    color: $color-grey-dark-3;
     font-family: "Orbitron", sans-serif;
     margin: 0 auto;
     margin-bottom: 2rem;
+
+    @include respond(phone) {
+        text-align: center;
+    }
+  }
+
+  &__sub {
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    color: $color-grey-dark-2;
+    font-family: "Orbitron", sans-serif;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+
+    @include respond(phone) {
+        text-align: center;
+    }
   }
 
   &__form {
+    position: relative;
     width: 50%;
     // height: 50%;
     padding: 4rem;
     z-index: 10;
     background: rgba($color-white, .8);
     border-radius: 5px;
+    padding-bottom: 2.5rem;
+
+    @include respond(tab-land) {
+        width: 75%;
+    }
+
+    @include respond(phone) {
+        width: 95%;
+        padding: 4rem 2rem;
+        margin-top: 8rem;;
+    }
+  }
+
+  &__form:after {
+      content: "";
+      width: 100%;
+      height: 16%;
+      background-color: rgba($color-primary, 1);
+      position: absolute;
+      top: 84%;
+      left: 0%;
+      z-index: -1;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+
+      @include respond(phone) {
+        height: 0%;
+    }
   }
 
 }
@@ -53,6 +101,10 @@
     &__group:not(:last-child) {
         margin-bottom: 2rem;
     }
+
+    // &__group:last-child {
+    //     margin-bottom: 4rem;
+    // }
 
     &__input {
         font-size: 1.5rem;
@@ -101,11 +153,29 @@
         transform: translateY(-4rem);
     }
 
+    &__button-container {
+        margin-top: 3rem;
+
+        @include respond(phone) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
     &__button {
-        width: 60%;
+        width: 300px;
         margin: 0 auto;
         color: $color-white;
         background-color: $color-primary;
+
+        @include respond(phone){
+            border: none;
+        }
+
+        @include respond(big-desktop) {
+        width: 350px;
+        height: 65px;
+      }
 
         &-icon {
             fill: $color-white;

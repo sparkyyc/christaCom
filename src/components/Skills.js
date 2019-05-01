@@ -5,67 +5,131 @@ import PostgresLogo from "../assets/PostgreSQL_logo.svg"
 import HerokuLogo from "../assets/heroku-logo-stroke-purple.svg"
 import SwiftLogo from "../assets/Swift_logo.svg"
 
-import Robot from "../assets/robots.svg"
-
 import Comp from "./Comp"
 
 class Skills extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { screenText: "Here are a few of the technologies I know, click them to learn more.", clicked: "Christa" }
+    this.state = {
+      screenText:
+        "Here are a few of the technologies I know, click them for either some useful info or a joke, it's a surprise.",
+      clicked: "Christa",
+    }
   }
 
-  onClick = (value) => {
+  onClick = value => {
     switch (value) {
       case "main":
-      this.setState({ screenText: "Here are a few of the technologies I know, click them to learn more.", 
-    clicked: "Christa" })
+        this.setState({
+          screenText:
+            "Here are a few of the technologies I know, click them for either some useful info or a joke, it's a surprise.",
+          clicked: "Christa",
+        })
         break
       case "github":
-        this.setState({ screenText: "Check out my github(linked at the footer of my site), you can find the code to this website there.", clicked: "Github" })
+        this.setState({
+          screenText:
+            "Check out my github, you can find the code to this website there. As well as most of my other projects.",
+          clicked: "Github",
+        })
         break
       case "postgres":
-        this.setState({ screenText: "My general go-to database. With RESTful routing or GraphQL.", clicked: "PostgreSQL" })
+        this.setState({
+          screenText:
+            "A solid SQL choice, has the memory of an elephant - hehe.",
+          clicked: "PostgreSQL",
+        })
         break
-        case "heroku":
-        this.setState({ screenText: "Very familiar with heroku deployment, generally what I used for deploying my backend.", clicked: "Heroku" })
-          break
-        case "swift":
-        this.setState({ screenText: "I created an AR game demo using Swift and ARKit2. Demo video in my projects secrtion.", clicked: "Swift" })
-          break
-        case "graphql":
-        this.setState({ screenText: "My current obssession. In a time crunch I'll use something like postgraphile, but I much prefer writing the resolvers and mutations myself.", clicked: "GraphQL" })
-          break
-        case "node":
-        this.setState({ screenText: "I use node/express for most of my personal projects, mostly because of familiarity with it.", clicked: "Node.js" })
-          break
-          case "python":
-        this.setState({ screenText: "I'm a beginner with Python and interested in developing this skill further", clicked: "Python" })
-          break
-          case "git":
-        this.setState({ screenText: "Where would I be without git? Probably at an apple store because a hammer, somehow, fell on my macbook.", clicked: "Git" })
-          break
-          case "terminal":
-        this.setState({ screenText: "The bread an butter. I wonder how I ever did anything on a computer before I knew the terminal.", clicked: "Terminal" })
-          break
-          case "html":
-        this.setState({ screenText: "Often overlooked, but without it my neopets page would have looked like trash.", clicked: "HTML5" })
-          break
-          case "sass":
-        this.setState({ screenText: "People always tell me I'm sassy, thought I'd finally embrace it. This site was written with Sass, deal with it.", clicked: "Sass" })
-          break
-          case "javascript":
-        this.setState({ screenText: "My first love, sure there may be some issues in the relationship, but you've got to pull through for the kid. Little React needs me.", clicked: "JavaScript" })
-          break
-          case "react":
-        this.setState({ screenText: "I may be addicted. Any flavour of React I have to play with. This site for example was written with Gatsby.js.", clicked: "React" })
-          break
-          case "css":
-        this.setState({ screenText: "I love CSS.", clicked: "CSS3" })
-          break
+      case "heroku":
+        this.setState({
+          screenText:
+            "I'm a bit of a hypocrite, becuase this site is deployed with Netlify for an easier way to recieve anything from the contact form.",
+          clicked: "Heroku",
+        })
+        break
+      case "swift":
+        this.setState({
+          screenText:
+            "I created an AR game demo using Swift and ARKit2. Sometimes I whip up AR 3D pokemon on pokemon cards to get cool points with the nieces and nephews.",
+          clicked: "Swift",
+        })
+        break
+      case "graphql":
+        this.setState({
+          screenText: `Unless you want me to talk your ear off about how GraphQL "just makes sense man" I wouldn't recommend bringing it up to me.`,
+          clicked: "GraphQL",
+        })
+        break
+      case "node":
+        this.setState({
+          screenText:
+            "Why was the JavaScript developer sad? Becuase he didn't Node how to Express himself.",
+          clicked: "Node.js",
+        })
+        break
+      case "python":
+        this.setState({
+          screenText:
+            "Too bad Hogwarts didn't have a computer class, Harry Potter had a great aptitude for Python.",
+          clicked: "Python",
+        })
+        break
+      case "git":
+        this.setState({
+          screenText:
+            "DaftPunk.git: clone it, fetch it, merge it, push it; pull it, log it, cherry-pick it",
+          clicked: "Git",
+        })
+        break
+      case "terminal":
+        this.setState({
+          screenText:
+            "mkdir hammerTime; chmod 500 hammerTime; cd hammerTime; touch this",
+          clicked: "Terminal",
+        })
+        break
+      case "html":
+        this.setState({
+          screenText:
+            "Often overlooked, but without it my neopets page would have looked like trash.",
+          clicked: "HTML5",
+        })
+        break
+      case "sass":
+        this.setState({
+          screenText:
+            "People always tell me I'm sassy, thought I'd finally embrace it. This site was written with Sass, deal with it.",
+          clicked: "Sass",
+        })
+        break
+      case "javascript":
+        this.setState({
+          screenText:
+            "My first love, sure there may be some issues in the relationship, but you've got to pull through for the kid. Little React needs me.",
+          clicked: "JavaScript",
+        })
+        break
+      case "react":
+        this.setState({
+          screenText:
+            "I've got to give you props if you use React, I'm a fan. This site for example was written with Gatsby.js.",
+          clicked: "React",
+        })
+        break
+      case "css":
+        this.setState({
+          screenText:
+            "Because without css this site wouldn't look like a space unicorn threw up on it, but maybe that would be for the best.",
+          clicked: "CSS3",
+        })
+        break
       default:
-        this.setState({ screenText: "Here are a few of the technologies I know, click them to learn more.", clicked: "" })
+        this.setState({
+          screenText:
+            "Here are a few of the technologies I know, click them for either some useful info or a joke, it's a surprise.",
+          clicked: "",
+        })
         break
     }
     console.log(this.state.clicked)
@@ -74,13 +138,21 @@ class Skills extends React.Component {
   render() {
     return (
       <div className="skills">
+        <div className="skills__background" />
         <h1 className="skills__header">Skills</h1>
         <div className="skills__info-box">
-          <Comp screenText={this.state.screenText} clicked={this.state.clicked} />
+          <Comp
+            screenText={this.state.screenText}
+            clicked={this.state.clicked}
+          />
         </div>
         <div className="skills__orbit">
           <ul className="orbit-wrap">
-            <li className="orbit-center" value="main" onClick={() => this.onClick("main")}>
+            <li
+              className="orbit-center"
+              value="main"
+              onClick={() => this.onClick("main")}
+            >
               <i className="orbit-center__icon fa fa-code" />
             </li>
 
@@ -152,6 +224,156 @@ class Skills extends React.Component {
               </ul>
             </li>
           </ul>
+        </div>
+        <div className="skills__phone-list">
+          <div className="phone-list">
+            <div
+              className="phone-list__item phone-list__item-javascript"
+              onClick={() => this.onClick("javascript")}
+            >
+              <i className="orbit-icon fab fa-js-square" />
+              {/* <p className="phone-list__item-title">JavaScript </p> 
+              <p className="phone-list__item-text">My first love, sure there may be some issues in the relationship, but you've got to pull through for the kid. Little React needs me.</p> */}
+            </div>
+            <div
+              className="phone-list__item phone-list__item-css"
+              onClick={() => this.onClick("css")}
+            >
+              <i className="orbit-icon fab fa-css3-alt" />
+              {/* <p className="phone-list__item-title">CSS3</p>
+               <p className="phone-list__item-text">Because without css this site wouldn't look like a space unicorn threw up on it, but maybe that would be for the best.</p> */}
+            </div>
+            <div
+              className="phone-list__item phone-list__item-react"
+              onClick={() => this.onClick("react")}
+            >
+              <i className="orbit-icon fab fa-react" />
+              {/* <p className="phone-list__item-title">React</p>
+              <p className="phone-list__item-text">I've got to give you props if you use React, I'm a fan. This site for example was written with Gatsby.js.</p> */}
+            </div>
+            <div
+              className="phone-list__item phone-list__item-git"
+              onClick={() => this.onClick("git")}
+            >
+              <i className="orbit-icon fab fa-git" />
+              {/* <p className="phone-list__item-title">Git</p>
+              <p className="phone-list__item-text">DaftPunk.git: clone it, fetch it, merge it, push it; pull it, log it, cherry-pick it</p> */}
+            </div>
+            <div
+              className="phone-list__item phone-list__item-terminal"
+              onClick={() => this.onClick("terminal")}
+            >
+              <i className="orbit-icon fas fa-terminal" />
+              {/* <p className="phone-list__item-title">Terminal</p>
+              <p className="phone-list__item-text">mkdir hammerTime; chmod 500 hammerTime; cd hammerTime; touch this</p> */}
+            </div>
+            <div
+              className="phone-list__item phone-list__item-html"
+              onClick={() => this.onClick("html")}
+            >
+              <i className="orbit-icon fab fa-html5" />
+              {/* <p className="phone-list__item-title">HTML5</p>
+              <p className="phone-list__item-text">Often overlooked, but without it my neopets page would have looked like trash.</p> */}
+            </div>
+            <div
+              className="phone-list__item phone-list__item-sass"
+              onClick={() => this.onClick("sass")}
+            >
+              <i className="orbit-icon fab fa-sass" />
+              {/* <p className="phone-list__item-title">Sass</p>
+              <p className="phone-list__item-text">People always tell me I'm sassy, thought I'd finally embrace it. This site was written with Sass, deal with it.</p> */}
+            </div>
+            <div
+              className="phone-list__item phone-list__item-graphql"
+              onClick={() => this.onClick("graphql")}
+            >
+              <i className="orbit-icon fab fa-graphql">
+                <GraphQLLogo className="graphqlLogo" />
+              </i>
+              {/* <p className="phone-list__item-title">GraphQL</p>
+              <p className="phone-list__item-text">Unless you want me to talk your ear off about how GraphQL "just makes sense man" I wouldn't recommend bringing it up to me.</p> */}
+            </div>
+            <div
+              className="phone-list__item phone-list__item-node"
+              onClick={() => this.onClick("node")}
+            >
+              <i className="orbit-icon fab fa-node-js" />
+              {/* <p className="phone-list__item-title">Node.js</p>
+              <p className="phone-list__item-text">Why was the JavaScript developer sad? Becuase he didn't Node how to Express himself.</p> */}
+            </div>
+            <div
+              className="phone-list__item phone-list__item-python"
+              onClick={() => this.onClick("python")}
+            >
+              <i className="orbit-icon fab fa-python" />
+              {/* <p className="phone-list__item-title">Python</p>
+              <p className="phone-list__item-text">Too bad Hogwarts didn't have a computer class, Harry Potter had a great aptitude for Python.</p> */}
+            </div>
+            <div
+              className="phone-list__item phone-list__item-github"
+              onClick={() => this.onClick("github")}
+            >
+              <i className="orbit-icon fab fa-github-alt" />
+              {/* <p className="phone-list__item-title">Github</p>
+              <p className="phone-list__item-text">Check out my github, you can find the code to this website there. As well as most of my other projects.</p> */}
+            </div>
+            <div
+              className="phone-list__item phone-list__item-postgres"
+              onClick={() => this.onClick("postgres")}
+            >
+              <i className="orbit-icon fab fa-postgres">
+                <PostgresLogo className="postgresLogo" />
+              </i>
+              {/* <p className="phone-list__item-title">PostgresQl</p>
+              <p className="phone-list__item-text">A solid SQL choice, has the memory of an elephant - hehe.",</p> */}
+            </div>
+            <div
+              className="phone-list__item phone-list__item-heroku"
+              onClick={() => this.onClick("heroku")}
+            >
+              <i className="orbit-icon fab fa-heroku">
+                <HerokuLogo className="herokuLogo" />
+              </i>
+              {/* <p className="phone-list__item-title">Heroku</p>
+              <p className="phone-list__item-text">I'm a bit of a hypocrite, becuase this site is deployed with Netlify for an easier way to recieve anything from the contact form.</p> */}
+            </div>
+            <div
+              className="phone-list__item phone-list__item-swift"
+              onClick={() => this.onClick("swift")}
+            >
+              <i className="orbit-icon fab fa-swift">
+                <SwiftLogo className="swiftLogo" />
+              </i>
+              {/* <p className="phone-list__item-title">Swift</p>
+              <p className="phone-list__item-text">I created an AR game demo using Swift and ARKit2. Sometimes I whip up AR 3D pokemon on pokemon cards to get cool points with the nieces and nephews.</p> */}
+            </div>
+            <div className="phone-list__display">
+            <span>
+              <p className="phone-list__display-title">
+                {this.state.clicked} -- version
+              </p>
+              <p className="phone-list__display-text">
+                {this.state.screenText}
+              </p>
+              </span>
+              <span>
+              <p className="phone-list__display-title">
+                {this.state.clicked} -- version
+              </p>
+              <p className="phone-list__display-text">
+                {this.state.screenText}
+              </p>
+              </span>
+              <span>
+              <p className="phone-list__display-title">
+                {this.state.clicked} -- version
+              </p>
+              <p className="phone-list__display-text">
+                {this.state.screenText}
+              </p>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     )

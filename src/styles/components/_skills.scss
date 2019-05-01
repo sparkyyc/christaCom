@@ -1,6 +1,10 @@
 .skills {
-  background-image: linear-gradient(to bottom, $color-white, $color-grey 50%);
-
+  background-image: linear-gradient(
+    to bottom,
+    rgba($color-white, 1),
+    rgba($color-grey, 1) 50%
+  );
+  background-size: cover;
   grid-row: 3 / span 1;
   grid-column: 1 / -1;
 
@@ -12,16 +16,58 @@
 
   overflow: hidden;
 
+  @include respond(phone) {
+    background-image: linear-gradient(
+      to bottom,
+      rgba($color-white, 1),
+      rgba($color-grey, 1)
+    );
+  }
+
+  &__background {
+    position: absolute;
+    // left: 22%;
+    // top: 15%;
+    left: 27%;
+    top: 20%;
+
+    height: 60%;
+    width: 60%;
+
+    // background-color: $color-grey-dark-3;
+    background-image: linear-gradient(
+      to bottom,
+      rgba($color-grey, 0.5) 47%,
+      rgba($color-white, 0.5)
+    );
+    -webkit-mask-image: url(../images/Untitled-1-13.svg);
+    mask-image: url(../images/Untitled-1-13.svg);
+    mask-repeat: no-repeat;
+    overflow: hidden;
+
+    @include respond(phone) {
+      display: none;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 10%;
+    }
+  }
+
   &__orbit {
     position: absolute;
-    left: 50%;
+    left: 55%;
     top: 0;
     height: 100%;
     width: 50%;
-    
+
     @include respond(tab-port) {
       left: 25%;
       top: -20%;
+    }
+
+    @include respond(phone) {
+      display: none;
     }
   }
 
@@ -29,10 +75,16 @@
     color: $color-grey;
     font-size: 5rem;
     text-align: center;
-    font-family: "Titillium Web", sans-serif;
-    letter-spacing: .4rem;
-    padding-top: 3rem;
+    // font-family: "Titillium Web", sans-serif;
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 0.4rem;
+    padding-top: 10rem;
     width: 100%;
+
+    @include respond(phone) {
+      padding-top: 0rem;
+      margin-bottom: 5rem;
+    }
   }
 
   &__info-box {
@@ -49,11 +101,191 @@
       margin-top: -140px;
       margin-left: -240px;
     }
-    
-    @include respond(big-desktop) {
-      left: 20%;
-      top: 35%;
+
+    @include respond(phone) {
+      display: none;
     }
+
+    @include respond(big-desktop) {
+      left: 14%;
+      top: 36%;
+    }
+  }
+
+  &__phone-list {
   }
 }
 
+.phone-list {
+  display: none;
+
+  @include respond(phone) {
+    height: 600px;
+    // display: inline-block;
+    // display: flex;
+    // flex-wrap: wrap;
+    // flex-direction: row;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-rows: repeat(5, 48px) 1fr;
+    grid-template-columns: repeat(6, 16.6%);
+    row-gap: 1.5rem;
+  }
+
+  &__display {
+    height: 240px;
+    width: 230px;
+    
+    grid-row: 6 / -1;
+    grid-column: 2 / span 4;
+    justify-self: center;
+    color: $color-comp-green;
+    border-radius: 5px;
+    position: relative;
+    background: $color-black;
+
+    @include boxGlitch("glitch", 12, 240, 250, 0, 0);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      height: 100%;
+      width: 100%;
+      background: $color-black;
+      border: 2px solid $color-comp-green;
+    }
+
+    &-title {
+      // display: inline-block;
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.6rem;
+      // text-align: center;
+      padding: 1.5rem;
+      padding-top: 2rem;
+    }
+
+    &-text {
+      font-family: "Titillium Web", sans-serif;
+      font-size: 1.6rem;
+      padding: 0 1.5rem;
+    }
+  }
+
+  &__item {
+    // padding: 1rem;
+    // height: 70px;
+    // width: 70px;
+    
+    // padding: 3rem;
+
+    &:first-child {
+      // margin-top: 5rem;
+    }
+    
+    & i {
+      display: inline-block;
+      // margin: 0 2rem;
+      // margin-top: 5rem;
+    }
+
+    &-javascript {
+      grid-row: 3 / span 1;
+      grid-column: 2 / span 1;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &-react {
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &-node {
+      grid-row: 1 / span 1;
+      grid-column: 3 / span 1;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &-css {
+      grid-row: 1 / span 1;
+      grid-column: 4 / span 1;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &-graphql {
+      grid-row: 1 / span 1;
+      grid-column: 5 / span 1;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &-git {
+      grid-row: 3 / span 1;
+      grid-column: 5 / span 1;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &-terminal {
+      grid-row: 4 / span 1;
+      grid-column: 3 / span 1;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &-html {
+      grid-row: 2 / span 1;
+      grid-column: 2 / span 1;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &-sass {
+      grid-row: 2 / span 1;
+      grid-column: 3 / span 1;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &-python {
+      grid-row: 2 / span 1;
+      grid-column: 4 / span 1;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &-github {
+      grid-row: 2 / span 1;
+      grid-column: 5 / span 1;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &-postgres {
+      grid-row: 4 / span 1;
+      grid-column: 4 / span 1;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &-heroku {
+      grid-row: 3 / span 1;
+      grid-column: 3 / span 1;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &-swift {
+      grid-row: 3 / span 1;
+      grid-column: 4 / span 1;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+}

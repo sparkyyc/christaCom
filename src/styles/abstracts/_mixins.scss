@@ -31,3 +31,47 @@ ORDER: Base + typography > general layout + grid > page layout > components
   }
 }
 
+@mixin boxGlitch($name, $intensity, $width, $height, $top, $left) {
+  
+    $steps: $intensity;
+    
+    // Ensure the @keyframes are generated at the root level
+    @at-root {
+      // We need two different ones
+      @for $i from 1 through 2 {
+        @keyframes #{$name}-anim-#{$i} {
+          @for $i from 0 through $steps {
+            #{percentage($i*(1/$steps))} {
+              clip: rect(
+                random($height)+px,
+                $width+px,
+                random($height)+px,
+                0
+              );
+            }
+          }
+        }
+      }
+    }
+    
+    > span {
+      position: absolute;
+      top: $top+px;
+      left: $left+px;
+      height: 100%;
+    }
+    > span:nth-child(2),
+    > span:nth-child(3){
+      clip: rect(0, 0, 0, 0); 
+    }
+    > span:nth-child(2) {
+      left: ($left + 1.5) + px;
+    //   box-shadow: 1px 0 blue;
+      animation: #{$name}-anim-1 3.5s infinite linear alternate-reverse;
+    }
+    > span:nth-child(3) {
+      left: ($left - 1.5) + px;
+    //   box-shadow: 1px 0 red;
+      animation: #{$name}-anim-2 3s infinite linear alternate-reverse;
+    }
+  }
