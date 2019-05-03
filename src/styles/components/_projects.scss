@@ -9,6 +9,18 @@
 
   position: relative;
 
+  &__header {
+    font-family: "Orbitron", sans-serif;
+    font-size: 5rem;
+    color: $color-white;
+    letter-spacing: .2rem;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+  }
+
   &__background1 {
     position: absolute;
     height: 90%;
@@ -39,8 +51,11 @@
 
   &__arrow {
     height: 100px;
+    width: 80px;
     fill: $color-white;
     transition: all .2s;
+    margin: 0 2rem;
+    
 
     &-left {
       transform: rotate(-90deg);
@@ -56,6 +71,21 @@
 
     &-right {
       transform: rotate(90deg);
+      // margin-right: 15rem;
+
+      &-animated {
+        transform: rotate(90deg);
+        animation: pulseRight 3s 3;
+        // margin-right: 15rem;
+
+        &:hover {
+          transform: translateX(-3px) rotate(90deg);
+        }
+    
+        &:active {
+          transform: translateX(-1px) rotate(90deg);
+        }
+      }
 
       &:hover {
         transform: translateX(-3px) rotate(90deg);
@@ -69,12 +99,11 @@
 }
 
 .projects__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100vh;
-  //   background: #444;
-  overflow: hidden;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-evenly;
+  // height: 100vh;
+  // overflow: hidden;
 }
 
 .card {
@@ -89,15 +118,11 @@
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
   opacity: 1;
+  transition: all .2s;
   
   &-animated {
     opacity: 0;
     animation: moveInFromBottom 0.5s 0.5s forwards ease-in;
-  }
-
-  &-animated-out {
-    opacity: 1;
-    animation: moveOutToTop 0.8s 0.8s forwards ease-in;
   }
 
   &__image-container {
@@ -115,7 +140,7 @@
 
     &-animated {
       opacity: 0;
-      animation: LineFadeIn 0.8s 0.8s forwards ease-in;
+      animation: LineFadeIn 0.8s 0.2s forwards ease-in;
     }
   }
 
@@ -127,7 +152,7 @@
     &-animated {
       height: 100%;
       opacity: 0;
-      animation: ImageFadeIn 0.8s 1.4s forwards;
+      animation: ImageFadeIn 0.8s .6s forwards;
     }
   }
 
@@ -153,7 +178,7 @@
       opacity: 0;
       // height: 360px;
       height: 28vh;
-      animation: ContentFadeIn 0.8s 1.6s forwards;
+      animation: ContentFadeIn 0.8s .8s forwards;
     }
   }
 
@@ -182,7 +207,7 @@
       left: 5%;
       font-size: 3rem;
       opacity: 0;
-      animation: ContentFadeIn 0.8s 1.6s forwards;
+      animation: ContentFadeIn 0.8s .8s forwards;
     }
   }
 }
@@ -225,5 +250,109 @@
 
 #trigger1 {
   position: absolute;
-  top: -12.5vh;
+  // top: -12.5vh;
+  top: 40%;
+}
+
+.transGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+
+  @include respond(phone) {
+    flex-wrap: wrap;
+  }
+}
+
+.cardTrans {
+  &-enter {
+    max-width: 0;
+    opacity: 0;
+    // transform: scale(0);
+  }
+
+  &-enter-active {
+    max-width: 400px;
+    opacity: 1;
+    // transform: scale(1);
+    transition: all .5s;
+  }
+
+  &-exit {
+    max-width: 400px;
+    opacity: 1;
+    // transform: scale(1);
+  }
+  
+  &-exit-active {
+    max-width: 0;
+    opacity: 0;
+    // transform: scale(0);
+    transition: all .5s;
+  }
+}
+
+
+.arrow-right {
+  &-enter {
+    height: 100px;
+    width: 80px;
+    opacity: 0;
+  }
+
+  &-enter-active {
+    height: 100px;
+    width: 80px;
+    opacity: 1;
+    transition: all 2s;
+  }
+
+  &-exit {
+    height: 100px;
+    width: 80px;
+    opacity: 1;
+  }
+  
+  &-exit-active {
+    height: 100px;
+    width: 80px;
+    opacity: 0;
+    transition: all 2s;
+  }
+}
+
+.arrow-left {
+  &-enter {
+    height: 100px;
+    width: 80px;
+    opacity: 0;
+  }
+
+  &-enter-active {
+    height: 100px;
+    width: 80px;
+    opacity: 1;
+    transition: all 2s;
+  }
+
+  &-exit {
+    height: 100px;
+    width: 80px;
+    opacity: 1;
+  }
+  
+  &-exit-active {
+    height: 100px;
+    width: 80px;
+    opacity: 0;
+    transition: all 2s;
+  }
+}
+
+.arrow-placeholder {
+    height: 100px;
+    width: 80px;
+    margin: 0 2rem;
 }

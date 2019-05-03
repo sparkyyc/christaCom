@@ -22,10 +22,14 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.5.0",
-    "scrollmagic": "^2.0.6"
+    "react-media": "^1.9.2",
+    "react-swipe": "^6.0.4",
+    "scrollmagic": "^2.0.6",
+    "swipe-js-iso": "^2.1.5"
   },
   "devDependencies": {
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "react-transition-group": "^4.0.0"
   },
   "keywords": [
     "gatsby"

@@ -251,6 +251,10 @@
 
     &:hover {
       animation: rotateSmall 3s infinite ease-in-out;
+
+      @include respond(phone) {
+        filter: none;
+      }
     }
 
     @include respond(phone) {
@@ -272,6 +276,10 @@
     &:hover {
       filter: url(#shadowAstro);
       animation: floating 3s infinite ease-in-out;
+
+      @include respond(phone) {
+        filter: none;
+      }
     }
 
     @include respond(tab-land) {
