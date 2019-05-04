@@ -19,6 +19,31 @@
     top: 10%;
     transform: translate(-50%, -50%);
     z-index: 50;
+
+    @include respond(phone) {
+      top: 2%;
+    }
+  }
+
+  &__swipeText {
+    display: none;
+
+    @include respond(phone) {
+      color: $color-grey-light-3;
+      font-family: "Orbitron", sans-serif;
+      font-size: 2rem;
+      display: inline-block;
+      position: absolute;
+      top: 12%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 20;
+      
+    }
+
+    &-animated {
+      animation: pulseText 2s 3;
+    }
   }
 
   &__background1 {
@@ -31,6 +56,10 @@
     mask-image: url(../images/Planets32.svg);
     mask-repeat: no-repeat;
     overflow: hidden;
+
+    @include respond(phone) {
+      top: 3%;
+    }
   }
 
   &__background2 {
@@ -47,6 +76,10 @@
     mask-repeat: no-repeat;
     overflow: hidden;
     transform: scaleX(-1);
+
+    @include respond(phone) {
+      top: 77%;
+    }
   }
 
   &__arrow {
@@ -55,6 +88,10 @@
     fill: $color-white;
     transition: all .2s;
     margin: 0 2rem;
+
+    @include respond(phone) {
+      display: none;
+    }
     
 
     &-left {
@@ -109,7 +146,7 @@
 .card {
   position: relative;
   background: #333;
-  width: 400px;
+  // width: 400px;
 //   height: 75vh;
   height: 520px;
   border-radius: 6px;
@@ -119,6 +156,12 @@
   overflow: hidden;
   opacity: 1;
   transition: all .2s;
+
+  @include respond(phone) {
+    // margin: 2rem 2rem;
+    width: 100vw;
+    padding: 2rem;
+  }
   
   &-animated {
     opacity: 0;
@@ -191,6 +234,10 @@
 
   &__text {
     font-size: 1.8rem;
+
+    @include respond(phone) {
+      max-width: 90%;
+    }
   }
 
   &__footer {
@@ -252,6 +299,10 @@
   position: absolute;
   // top: -12.5vh;
   top: 40%;
+
+  @include respond(phone) {
+    top: 35%;
+  }
 }
 
 .transGroup {
@@ -262,7 +313,8 @@
   overflow: hidden;
 
   @include respond(phone) {
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+
   }
 }
 
@@ -355,4 +407,13 @@
     height: 100px;
     width: 80px;
     margin: 0 2rem;
+
+    @include respond(phone) {
+      display: none;
+    }
+}
+
+.carousel {
+  width: 100vw;
+  
 }

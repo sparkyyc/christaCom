@@ -4,9 +4,9 @@ import Media from "react-media"
 import ReactSwipe from "react-swipe"
 
 import Card from "./Card"
-import portPhoto from "../images/port-site-1.png"
-import agilityPhoto from "../images/agility.png"
-import maplabsPhoto from "../images/maplabs.png"
+import portPhoto from "../images/port-site-1.jpg"
+import agilityPhoto from "../images/agility.jpg"
+import maplabsPhoto from "../images/maplabs.jpg"
 
 import ShipArrow from "../assets/aliens/alien-4.svg"
 
@@ -87,6 +87,7 @@ class Projects extends React.Component {
     ]
 
     const mobileCardArr = [
+      <div>
         <Card
           title="This site"
           text="Check out my github for this site. Made with Gatsby and Sass."
@@ -95,7 +96,8 @@ class Projects extends React.Component {
           github="https://github.com/sparkyyc/christaCom"
           animated={animated[0]}
           key={0}
-        />,
+        /></div>,
+        <div>
         <Card
           title="Agility"
           text="Agile team management app. React frontend and Node/GraphQL backend."
@@ -104,7 +106,8 @@ class Projects extends React.Component {
           github="https://github.com/sparkyyc/Agility"
           animated={animated[1]}
           key={1}
-        />,
+        /></div>,
+        <div>
         <Card
           title="MAPLabs"
           text="Current UI/UX lead on a project with MAPLabs."
@@ -112,7 +115,13 @@ class Projects extends React.Component {
           className="maplabs__img"
           animated={animated[2]}
           key={2}
-        />,
+        /></div>,
+    ]
+
+    let testArr = [
+      <div key={0} >0</div>,
+      <div key={1} >1</div>,
+      <div key={3} >2</div>
     ]
 
     let reactSwipeEl
@@ -121,6 +130,7 @@ class Projects extends React.Component {
     return (
       <div className="projects">
       <h1 className="projects__header">Projects</h1>
+      <h3 className="projects__swipeText" id="swipeText" >Swipe the cards!</h3>
         <div className="projects__background1" />
         <div className="projects__background2" />
         <div id="trigger1" />
@@ -144,7 +154,8 @@ class Projects extends React.Component {
                   <ReactSwipe
                     className="carousel"
                     swipeOptions={{
-                      continuous: true,
+                      widthOfSiblingSlidePreview: 10,
+                      continuous: false,
                       startSlide:
                         startSlide < mobileCardArr.length && startSlide >= 0
                           ? startSlide
