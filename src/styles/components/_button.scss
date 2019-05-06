@@ -1,59 +1,58 @@
 .button {
-    &,
-    &:link,
-    &:visited {
-      width: 350px;
-      height: 58px;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
+  &,
+  &:link,
+  &:visited {
+    width: 350px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 
-      padding-top: 5px;
-      padding-left: 5px;
-      // background-color: transparent;
-      background-color: $color-white;
-      border-radius: 10rem;
-      text-decoration: none;
+    padding-top: 5px;
+    padding-left: 5px;
 
-      font-size: 2.5rem;
-      font-family: "Orbitron", sans-serif;
-      letter-spacing: 0.05em;
-      // color: $color-white;
-      color: $color-primary-dark;
-      text-align: center;
-      text-transform: uppercase;
-      cursor: pointer;
-      border: 3px solid $color-white;
-      // border-bottom: 4px solid $color-white;
+    background-color: $color-white;
+    border-radius: 10rem;
+    text-decoration: none;
 
-      transition: all 0.2s;
-      overflow: hidden;
-    }
+    font-size: 2.5rem;
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 0.05em;
 
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-    }
+    color: $color-primary-dark;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 3px solid $color-white;
 
-    &:hover &__icon {
-      transform: rotate(0deg);
-    }
-
-    &:active {
-      outline: none;
-      transform: translateY(-1px);
-      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-    }
-
-    &:active &__icon {
-      transform: rotate(0deg) translateY(-5rem);
-    }
-
-    &__icon {
-      width: 3.2rem;
-      padding-bottom: 5px;
-      fill: $color-primary-dark;
-      transform: rotate(90deg) translateX(-3px);
-      transition: transform 0.3s, fill 0.18s;
-    }
+    transition: all 0.2s;
+    overflow: hidden;
   }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
+
+  &:hover &__icon {
+    transform: rotate(0deg);
+  }
+
+  &:active {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &:active &__icon {
+    transform: rotate(0deg) translateY(-5rem);
+  }
+
+  &__icon {
+    width: 3.2rem;
+    padding-bottom: 5px;
+    fill: $color-primary-dark;
+    transform: rotate(90deg) translateX(-3px);
+    transition: transform 0.3s, fill 0.18s;
+  }
+}

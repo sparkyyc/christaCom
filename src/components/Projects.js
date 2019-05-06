@@ -96,8 +96,9 @@ class Projects extends React.Component {
           github="https://github.com/sparkyyc/christaCom"
           animated={animated[0]}
           key={0}
-        /></div>,
-        <div>
+        />
+      </div>,
+      <div>
         <Card
           title="Agility"
           text="Agile team management app. React frontend and Node/GraphQL backend."
@@ -106,8 +107,9 @@ class Projects extends React.Component {
           github="https://github.com/sparkyyc/Agility"
           animated={animated[1]}
           key={1}
-        /></div>,
-        <div>
+        />
+      </div>,
+      <div>
         <Card
           title="MAPLabs"
           text="Current UI/UX lead on a project with MAPLabs."
@@ -115,22 +117,18 @@ class Projects extends React.Component {
           className="maplabs__img"
           animated={animated[2]}
           key={2}
-        /></div>,
+        />
+      </div>,
     ]
 
-    let testArr = [
-      <div key={0} >0</div>,
-      <div key={1} >1</div>,
-      <div key={3} >2</div>
-    ]
-
-    let reactSwipeEl
     let startSlide = 0
 
     return (
       <div className="projects">
-      <h1 className="projects__header">Projects</h1>
-      <h3 className="projects__swipeText" id="swipeText" >Swipe the cards!</h3>
+        <h1 className="projects__header">Projects</h1>
+        <h3 className="projects__swipeText" id="swipeText">
+          Swipe the cards!
+        </h3>
         <div className="projects__background1" />
         <div className="projects__background2" />
         <div id="trigger1" />
@@ -192,8 +190,3 @@ class Projects extends React.Component {
 }
 
 export default Projects
-
-// <CSSTransition timeout={500} classNames="cardTrans">
-// <div style={{ width: "100px" }} />
-// <div className="arrow-placeholder"></div>
-// cardArr.slice(pageCurr, 1 + pageCurr)

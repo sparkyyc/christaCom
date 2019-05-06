@@ -16,10 +16,12 @@ export default () => (
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
-      <input type="hidden" name="bot-field" />
-      <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
         <h1 className="contact__header">Contact Me</h1>
-        <h4 className="contact__sub">For a job, your next project, or just to say hello.</h4>
+        <h4 className="contact__sub">
+          For a job, your next project, or just to say hello.
+        </h4>
         <div className="form__group">
           <input
             className="form__input"

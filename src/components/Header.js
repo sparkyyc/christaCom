@@ -5,12 +5,8 @@ import Firstname from "../assets/NasaChrista"
 import Lastname from "../assets/NasaSparks"
 import Stars1 from "../assets/stars/sharp-twinkle-group.svg"
 import Stars2 from "../assets/stars/mid-cross-group-filled.svg"
-
 import Planet from "../assets/planet/planet-5.svg"
-import PlanetSwirl from "../assets/planet/planet-3.svg"
-
 import Astronaut from "../assets/astronauts/astro-9.svg"
-import Rocket from "../assets/other/rocket2.svg"
 
 class Header extends React.Component {
   render() {
@@ -60,8 +56,9 @@ class Header extends React.Component {
             </p>
           </div>
           <div className="background__scroll-indicator">
-            <a href="#about-start">
-              <span />Scroll
+            <a>
+              <span />
+              Scroll
             </a>
           </div>
         </div>

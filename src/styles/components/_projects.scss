@@ -5,7 +5,6 @@
   grid-column: 1 / -1;
 
   font-family: "Titillium Web", sans-serif;
-  // overflow: hidden;
 
   position: relative;
 
@@ -13,10 +12,10 @@
     font-family: "Orbitron", sans-serif;
     font-size: 5rem;
     color: $color-white;
-    letter-spacing: .2rem;
+    letter-spacing: 0.2rem;
     position: absolute;
     left: 50%;
-    top: 10%;
+    top: 3%;
     transform: translate(-50%, -50%);
     z-index: 50;
 
@@ -38,7 +37,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 20;
-      
     }
 
     &-animated {
@@ -69,7 +67,7 @@
 
     top: 45%;
     left: 55%;
-    
+
     background-color: $color-grey-dark-3;
     -webkit-mask-image: url(../images/Astronaut1.svg);
     mask-image: url(../images/Astronaut1.svg);
@@ -86,13 +84,12 @@
     height: 100px;
     width: 80px;
     fill: $color-white;
-    transition: all .2s;
+    transition: all 0.2s;
     margin: 0 2rem;
 
     @include respond(phone) {
       display: none;
     }
-    
 
     &-left {
       transform: rotate(-90deg);
@@ -100,7 +97,7 @@
       &:hover {
         transform: translateX(-3px) rotate(-90deg);
       }
-  
+
       &:active {
         transform: translateX(-1px) rotate(-90deg);
       }
@@ -108,17 +105,15 @@
 
     &-right {
       transform: rotate(90deg);
-      // margin-right: 15rem;
 
       &-animated {
         transform: rotate(90deg);
-        animation: pulseRight 3s 3;
-        // margin-right: 15rem;
+        animation: pulseRight 3s 4;
 
         &:hover {
           transform: translateX(-3px) rotate(90deg);
         }
-    
+
         &:active {
           transform: translateX(-1px) rotate(90deg);
         }
@@ -127,7 +122,7 @@
       &:hover {
         transform: translateX(-3px) rotate(90deg);
       }
-  
+
       &:active {
         transform: translateX(-1px) rotate(90deg);
       }
@@ -136,18 +131,12 @@
 }
 
 .projects__container {
-  // display: flex;
-  // align-items: center;
-  // justify-content: space-evenly;
-  // height: 100vh;
-  // overflow: hidden;
 }
 
 .card {
   position: relative;
   background: #333;
-  // width: 400px;
-//   height: 75vh;
+  width: 400px;
   height: 520px;
   border-radius: 6px;
   padding: 2rem;
@@ -155,14 +144,13 @@
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
   opacity: 1;
-  transition: all .2s;
+  transition: all 0.2s;
 
   @include respond(phone) {
-    // margin: 2rem 2rem;
     width: 100vw;
     padding: 2rem;
   }
-  
+
   &-animated {
     opacity: 0;
     animation: moveInFromBottom 0.5s 0.5s forwards ease-in;
@@ -170,16 +158,12 @@
 
   &__image-container {
     margin: -2rem -2rem 1rem -2rem;
-    // height: 37.5vh;
     height: 275px;
     width: 400px;
-    // z-index: 8;
-    //  object-fit: cover;
   }
 
   &__line {
     opacity: 0;
-    // animation: LineFadeIn 0.8s forwards ease-in;
 
     &-animated {
       opacity: 0;
@@ -190,12 +174,11 @@
   &__image {
     height: 100%;
     opacity: 0;
-    // animation: ImageFadeIn 0.8s .6s forwards;
 
     &-animated {
       height: 100%;
       opacity: 0;
-      animation: ImageFadeIn 0.8s .6s forwards;
+      animation: ImageFadeIn 0.8s 0.6s forwards;
     }
   }
 
@@ -211,17 +194,13 @@
   &__content {
     margin-top: -1rem;
     opacity: 0;
-    // height: 360px;
     height: 28vh;
-    // z-index: 10;
-    // animation: ContentFadeIn 0.8s .4s forwards;
 
     &-animated {
       margin-top: -1rem;
       opacity: 0;
-      // height: 360px;
       height: 28vh;
-      animation: ContentFadeIn 0.8s .8s forwards;
+      animation: ContentFadeIn 0.8s 0.8s forwards;
     }
   }
 
@@ -229,7 +208,6 @@
     position: absolute;
     left: 0;
     top: 10%;
-    // z-index: 9;
   }
 
   &__text {
@@ -246,7 +224,6 @@
     left: 5%;
     font-size: 3rem;
     opacity: 0;
-    // animation: ContentFadeIn 0.8s forwards;
 
     &-animated {
       position: absolute;
@@ -254,7 +231,7 @@
       left: 5%;
       font-size: 3rem;
       opacity: 0;
-      animation: ContentFadeIn 0.8s .8s forwards;
+      animation: ContentFadeIn 0.8s 0.8s forwards;
     }
   }
 }
@@ -285,8 +262,6 @@
 }
 
 #portfolio-1__img {
-  //   transform: translateX(-6rem);
-  //   -webkit-transform: translateX(-6rem);
 }
 
 #agility__img {
@@ -297,11 +272,10 @@
 
 #trigger1 {
   position: absolute;
-  // top: -12.5vh;
-  top: 40%;
+  top: 0;
 
   @include respond(phone) {
-    top: 35%;
+    top: 33vh;
   }
 }
 
@@ -311,41 +285,31 @@
   justify-content: space-between;
   height: 100vh;
   overflow: hidden;
-
-  @include respond(phone) {
-    // flex-wrap: wrap;
-
-  }
 }
 
 .cardTrans {
   &-enter {
     max-width: 0;
     opacity: 0;
-    // transform: scale(0);
   }
 
   &-enter-active {
     max-width: 400px;
     opacity: 1;
-    // transform: scale(1);
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   &-exit {
     max-width: 400px;
     opacity: 1;
-    // transform: scale(1);
   }
-  
+
   &-exit-active {
     max-width: 0;
     opacity: 0;
-    // transform: scale(0);
-    transition: all .5s;
+    transition: all 0.5s;
   }
 }
-
 
 .arrow-right {
   &-enter {
@@ -366,7 +330,7 @@
     width: 80px;
     opacity: 1;
   }
-  
+
   &-exit-active {
     height: 100px;
     width: 80px;
@@ -394,7 +358,7 @@
     width: 80px;
     opacity: 1;
   }
-  
+
   &-exit-active {
     height: 100px;
     width: 80px;
@@ -404,16 +368,15 @@
 }
 
 .arrow-placeholder {
-    height: 100px;
-    width: 80px;
-    margin: 0 2rem;
+  height: 100px;
+  width: 80px;
+  margin: 0 2rem;
 
-    @include respond(phone) {
-      display: none;
-    }
+  @include respond(phone) {
+    display: none;
+  }
 }
 
 .carousel {
   width: 100vw;
-  
 }

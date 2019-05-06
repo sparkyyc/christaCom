@@ -1,69 +1,5 @@
 import React from "react"
-// import ScrollM from "scrollmagic"
 class Card extends React.Component {
-  constructor(props) {
-    super(props)
-    // this.controller = new ScrollM.Controller()
-  }
-
-  componentDidMount() {
-    // const scrollDuration = 1000
-    // new ScrollM.Scene({
-    //   triggerElement: "#trigger1",
-    //   duration: scrollDuration, // scroll distance
-    //   //   offset: 200 // start this scene after scrolling for 50px
-    // })
-    //   .setClassToggle("#card-image", "card__image-animated")
-    //   //   .setPin("#myElement") // pins the element for the the scene's duration
-    //   .addTo(this.controller) // assign the scene to the controller
-
-    // new ScrollM.Scene({
-    //   triggerElement: "#trigger1",
-    //   duration: scrollDuration, // scroll distance
-    //   //   offset: 200 // start this scene after scrolling for 50px
-    // })
-    //   .setClassToggle("#card-line", "card__line-animated")
-    //   //   .setPin("#myElement") // pins the element for the the scene's duration
-    //   .addTo(this.controller) // assign the scene to the controller
-
-    // new ScrollM.Scene({
-    //   triggerElement: "#trigger1",
-    //   duration: scrollDuration, // scroll distance
-    //   //   offset: 200 // start this scene after scrolling for 50px
-    // })
-    //   .setClassToggle("#card-content", "card__content-animated")
-    //   //   .setPin("#myElement") // pins the element for the the scene's duration
-    //   .addTo(this.controller) // assign the scene to the controller
-
-    // new ScrollM.Scene({
-    //   triggerElement: "#trigger1",
-    //   duration: scrollDuration, // scroll distance
-    //   //   offset: 200 // start this scene after scrolling for 50px
-    // })
-    //   .setClassToggle("#card-footer", "card__footer-animated")
-    //   //   .setPin("#myElement") // pins the element for the the scene's duration
-    //   .addTo(this.controller) // assign the scene to the controller
-
-    //   new ScrollM.Scene({
-    //     triggerElement: "#trigger1",
-    //     duration: scrollDuration, // scroll distance
-    //     //   offset: 200 // start this scene after scrolling for 50px
-    //   })
-    //     .setClassToggle("#card", "card-animated")
-    //     //   .setPin("#myElement") // pins the element for the the scene's duration
-    //     .addTo(this.controller) // assign the scene to the controller
-
-    //     new ScrollM.Scene({
-    //       triggerElement: "#trigger1",
-    //       duration: scrollDuration, // scroll distance
-    //         offset: 600 // start this scene after scrolling for 50px
-    //     })
-    //       .setClassToggle("#card", "card-animated-out")
-    //       //   .setPin("#myElement") // pins the element for the the scene's duration
-    //       .addTo(this.controller) // assign the scene to the controller
-    
-  }
-
   render() {
     let gh
     let video
@@ -73,7 +9,12 @@ class Card extends React.Component {
       gh = (
         <div className="btn-link">
           <i className="card__footer-icon fab fa-github" />
-          <a href={this.props.github} target="_blank" rel="noopener noreferrer" className="link">
+          <a
+            href={this.props.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link"
+          >
             /sparkyyc
           </a>
         </div>
@@ -86,7 +27,12 @@ class Card extends React.Component {
       video = (
         <div className="btn-link">
           <i className="card__footer-icon fas fa-video" />
-          <a href={this.props.video} target="_blank" rel="noopener noreferrer" className="link">
+          <a
+            href={this.props.video}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link"
+          >
             demo video
           </a>
         </div>
@@ -99,7 +45,12 @@ class Card extends React.Component {
       site = (
         <div className="btn-link">
           <i className="card__footer-icon fas fa-link" />
-          <a href={this.props.site} target="_blank" rel="noopener noreferrer" className="link">
+          <a
+            href={this.props.site}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link"
+          >
             live site
           </a>
         </div>
@@ -109,11 +60,12 @@ class Card extends React.Component {
     }
 
     return (
-      <div className="card" id="card" >
-        <div id="trigger1" />
+      <div className="card" id="card">
         <div className="card__image-container" id={this.props.className}>
           <img
-            className={this.props.animated ? "card__image-animated" : "card__image"}
+            className={
+              this.props.animated ? "card__image-animated" : "card__image"
+            }
             id="card-image"
             src={this.props.img}
             alt=""
@@ -126,7 +78,9 @@ class Card extends React.Component {
             fill="#333"
           />
           <path
-            className={this.props.animated ? "card__line-animated" : "card__line"}
+            className={
+              this.props.animated ? "card__line-animated" : "card__line"
+            }
             id="card-line"
             d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400"
             stroke="pink"
@@ -135,11 +89,21 @@ class Card extends React.Component {
           />
         </svg>
 
-        <div className={this.props.animated ? "card__content-animated" : "card__content"} id="card-content">
+        <div
+          className={
+            this.props.animated ? "card__content-animated" : "card__content"
+          }
+          id="card-content"
+        >
           <h1 className="card__title">{this.props.title}</h1>
           <p className="card__text">{this.props.text}</p>
         </div>
-        <div className={this.props.animated ? "card__footer-animated" : "card__footer"} id="card-footer">
+        <div
+          className={
+            this.props.animated ? "card__footer-animated" : "card__footer"
+          }
+          id="card-footer"
+        >
           {gh}
           {video}
           {site}

@@ -15,9 +15,7 @@ export default function HTML(props) {
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
-        <noscript key="noscript" id="gatsby-noscript">
-          
-        </noscript>
+        <noscript key="noscript" id="gatsby-noscript" />
         <div
           key={`body`}
           id="___gatsby"

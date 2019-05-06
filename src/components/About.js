@@ -22,10 +22,10 @@ export default () => (
           your next project, so feel free to reach out.
         </p>
         <p className="about__details-text about__details-text-2">
-          I moved to Boulder, CO  from Florida in 2018 after getting my degree in accounting
-          at FSU and working for a few years in finance. I loved being creative
-          too much to stick with just numbers, now I've combined my love of
-          tech, numbers, and creativity into a career I love.
+          I moved to Boulder, CO from Florida in 2018 after getting my degree in
+          accounting at FSU and working for a few years in finance. I loved
+          being creative too much to stick with just numbers, now I've combined
+          my love of tech, numbers, and creativity into a career I love.
         </p>
         <Robo2 className="about__details-robo2" />
       </div>

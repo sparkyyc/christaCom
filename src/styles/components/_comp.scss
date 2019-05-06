@@ -1,9 +1,7 @@
 .comp-container {
   width: 680px;
-  // margin: 0px auto;
-  position: relative;
 
-  // transform: scale(0.75);
+  position: relative;
 }
 
 .screen {
@@ -79,13 +77,10 @@
   border-top: 20px solid $color-grey-dark-2;
   border-radius: 5px;
   box-shadow: 0 5px 0 $color-black;
-  
 
   &-icon {
     background: transparent !important;
-    // margin-right: 10px;
     margin-left: 10px;
-
   }
 }
 
@@ -93,10 +88,6 @@
   display: flex;
   flex: 0 50%;
   flex-wrap: wrap;
-
-  // text-align: center;
-
-  
 }
 
 .txt {
@@ -108,7 +99,6 @@
   @include respond(big-desktop) {
     font-size: 1.5rem;
   }
-  
 }
 
 .btns {
