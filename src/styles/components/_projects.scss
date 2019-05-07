@@ -86,6 +86,8 @@
     fill: $color-white;
     transition: all 0.2s;
     margin: 0 2rem;
+    cursor: pointer;
+    // flex-basis: 25%;
 
     @include respond(phone) {
       display: none;
@@ -145,10 +147,14 @@
   overflow: hidden;
   opacity: 1;
   transition: all 0.2s;
+  display: inline-block;
+  // flex-basis: 25%;
+  margin: 0 10rem;
 
   @include respond(phone) {
     width: 100vw;
     padding: 2rem;
+    margin: 0;
   }
 
   &-animated {
@@ -237,6 +243,7 @@
 }
 
 .btn-link {
+  cursor: pointer;
   &,
   &:link,
   &:visited {
@@ -282,32 +289,60 @@
 .transGroup {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100vh;
   overflow: hidden;
 }
 
 .cardTrans {
   &-enter {
+    padding: 0;
     max-width: 0;
     opacity: 0;
+    margin: 0;
+
+    & > div > p {
+      // opacity: 0;
+      font-size: 0rem;
+    }
   }
 
   &-enter-active {
     max-width: 400px;
     opacity: 1;
-    transition: all 0.5s;
+    transition: all 2s;
+    margin: 0 10em;
+    padding: 2rem;
+
+    & > div > p {
+      // opacity: 1;
+      font-size: 1.8rem;
+    }
   }
 
   &-exit {
     max-width: 400px;
     opacity: 1;
+    margin: 0 10em;
+    padding: 2rem;
+
+    & > div > p {
+      // opacity: 1;
+      font-size: 1.8rem;
+    }
   }
 
   &-exit-active {
+    padding: 0;
     max-width: 0;
     opacity: 0;
-    transition: all 0.5s;
+    transition: all 2s;
+    margin: 0;
+
+    & > div > p {
+      // opacity: 0;
+      font-size: 0rem;
+    }
   }
 }
 
@@ -316,26 +351,28 @@
     height: 100px;
     width: 80px;
     opacity: 0;
+    transition: all 5s;
   }
 
   &-enter-active {
     height: 100px;
     width: 80px;
     opacity: 1;
-    transition: all 2s;
+    transition: all 5s;
   }
 
   &-exit {
     height: 100px;
     width: 80px;
     opacity: 1;
+    transition: all 5s;
   }
 
   &-exit-active {
     height: 100px;
     width: 80px;
     opacity: 0;
-    transition: all 2s;
+    transition: all 5s;
   }
 }
 
@@ -344,26 +381,28 @@
     height: 100px;
     width: 80px;
     opacity: 0;
+    transition: all 5s;
   }
 
   &-enter-active {
     height: 100px;
     width: 80px;
     opacity: 1;
-    transition: all 2s;
+    transition: all 5s;
   }
 
   &-exit {
     height: 100px;
     width: 80px;
     opacity: 1;
+    transition: all 5s;
   }
 
   &-exit-active {
     height: 100px;
     width: 80px;
     opacity: 0;
-    transition: all 2s;
+    transition: all 5s;
   }
 }
 
@@ -371,6 +410,8 @@
   height: 100px;
   width: 80px;
   margin: 0 2rem;
+  transition: all 4s;
+  // flex-basis: 25%;
 
   @include respond(phone) {
     display: none;
@@ -378,5 +419,16 @@
 }
 
 .carousel {
-  width: 100vw;
+  // width: 100vw;
+  display: none;
+
+  @include respond(phone) {
+    display: inline-block;
+  }
+}
+
+.cardGroupTrans {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

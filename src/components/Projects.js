@@ -52,7 +52,7 @@ class Projects extends React.Component {
   render() {
     const { pageCurr, cardNumToShow, animated } = this.state
     const cardArr = [
-      <CSSTransition timeout={500} classNames="cardTrans" key={0}>
+      <CSSTransition timeout={2000} classNames="cardTrans" key={0}>
         <Card
           title="This site"
           text="Check out my github for this site. Made with Gatsby and Sass."
@@ -63,7 +63,7 @@ class Projects extends React.Component {
           key={0}
         />
       </CSSTransition>,
-      <CSSTransition timeout={500} classNames="cardTrans" key={1}>
+      <CSSTransition timeout={2000} classNames="cardTrans" key={1}>
         <Card
           title="Agility"
           text="Agile team management app. React frontend and Node/GraphQL backend."
@@ -74,7 +74,7 @@ class Projects extends React.Component {
           key={1}
         />
       </CSSTransition>,
-      <CSSTransition timeout={500} classNames="cardTrans" key={2}>
+      <CSSTransition timeout={2000} classNames="cardTrans" key={2}>
         <Card
           title="MAPLabs"
           text="Current UI/UX lead on a project with MAPLabs."
@@ -134,18 +134,13 @@ class Projects extends React.Component {
         <div id="trigger1" />
         <div className="projects__container" id="projects">
           <TransitionGroup className="transGroup">
-            {pageCurr > 0 ? (
-              <CSSTransition timeout={500} classNames="arrow-left" key="0">
+          <CSSTransition timeout={6000} classNames="arrow-left" key={5}>
                 <ShipArrow
                   className="projects__arrow projects__arrow-left"
-                  onClick={this.onClickLeft}
+                  onClick={ pageCurr > 0 ? this.onClickLeft : null }
+                  style={{ opacity: pageCurr === 0 ? "0" : 1 }}
                 />
               </CSSTransition>
-            ) : (
-              <CSSTransition timeout={500} classNames="arrow-left" key="0">
-                <div className="arrow-placeholder" />
-              </CSSTransition>
-            )}
             <Media query="(max-width: 599px)">
               {matches =>
                 matches ? (
@@ -165,23 +160,20 @@ class Projects extends React.Component {
                     {mobileCardArr}
                   </ReactSwipe>
                 ) : (
-                  cardArr.slice(pageCurr, cardNumToShow + pageCurr)
+                  <TransitionGroup classNames="cardGroupTrans">
+                    {cardArr.slice(pageCurr, cardNumToShow + pageCurr)}
+                  </TransitionGroup>
                 )
               }
             </Media>
-            {pageCurr < cardArr.length - 2 ? (
-              <CSSTransition timeout={500} classNames="arrow-right" key={3}>
+            <CSSTransition timeout={6000} classNames="arrow-right" key={3}>
                 <ShipArrow
                   className="projects__arrow projects__arrow-right"
-                  onClick={this.onClickRight}
+                  onClick={ pageCurr < cardArr.length - 2 ? this.onClickRight: {} }
+                  style={{opacity: pageCurr >= cardArr.length - 2 ? "0" : "1"}}
                   id="arrow-right"
                 />
               </CSSTransition>
-            ) : (
-              <CSSTransition timeout={500} classNames="arrow-right" key={4}>
-                <div className="arrow-placeholder" />
-              </CSSTransition>
-            )}
           </TransitionGroup>
         </div>
       </div>
@@ -190,3 +182,33 @@ class Projects extends React.Component {
 }
 
 export default Projects
+
+
+// {pageCurr < cardArr.length - 2 ? (
+//   <CSSTransition timeout={6000} classNames="arrow-right" key={3}>
+//     <ShipArrow
+//       className="projects__arrow projects__arrow-right"
+//       onClick={ pageCurr < cardArr.length - 2 ? this.onClickRight: {} }
+//       style={ pageCurr > cardArr.length - 2 ? {opacity: "0"}: {}}
+//       id="arrow-right"
+//     />
+//   </CSSTransition>
+// ) : (
+//   <CSSTransition timeout={6000} classNames="arrow-right" key={4}>
+//     <div className="arrow-placeholder" />
+//   </CSSTransition>
+// )}
+
+// {pageCurr > 0 ? (
+//   <CSSTransition timeout={6000} classNames="arrow-left" key={5}>
+//     <ShipArrow
+//       className="projects__arrow projects__arrow-left"
+//       onClick={ pageCurr > 0 ? this.onClickLeft : null }
+//       style={ pageCurr === 0 ? {opacity: "0"} : null }
+//     />
+//   </CSSTransition>
+// ) : (
+//   <CSSTransition timeout={6000} classNames="arrow-left" key={6}>
+//     <div className="arrow-placeholder" />
+//   </CSSTransition>
+// )}
