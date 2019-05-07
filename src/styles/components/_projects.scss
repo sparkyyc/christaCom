@@ -156,6 +156,7 @@
     padding: 2rem;
     margin: 0;
     margin-top: 15rem;
+    border-radius: 6px;
   }
 
   &-animated {
@@ -170,6 +171,7 @@
 
     @include respond(phone) {
       width: 100vw;
+      border-radius: 6px;
     }
   }
 
