@@ -223,6 +223,9 @@
     position: absolute;
     left: 0;
     top: 10%;
+    @include respond(phone) {
+      width: 100vw;
+    }
   }
 
   &__text {
