@@ -245,6 +245,10 @@
     font-size: 3rem;
     opacity: 0;
 
+    @include respond(phone) {
+      top: 85%;
+    }
+
     &-animated {
       position: absolute;
       top: 90%;
@@ -252,6 +256,10 @@
       font-size: 3rem;
       opacity: 0;
       animation: ContentFadeIn 0.8s 0.8s forwards;
+
+      @include respond(phone) {
+        top: 85%;
+      }
     }
   }
 }
