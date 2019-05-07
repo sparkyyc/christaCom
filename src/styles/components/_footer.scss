@@ -9,7 +9,7 @@
   align-items: center;
 
   @include respond(phone) {
-    height: 10vh;
+    display: none;
   }
 
   &__links {
