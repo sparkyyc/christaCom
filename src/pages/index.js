@@ -10,12 +10,12 @@ import Contact from "../components/Contact"
 
 import "../styles/main.scss"
 class IndexPage extends React.Component {
-  componentDidMount() {
-    document.body.classList.add("js-loading")
-    window.addEventListener("load", () => {
-      document.body.classList.remove("js-loading")
-    })
-  }
+  // componentDidMount() {
+  //   document.body.classList.add("js-loading")
+  //   window.addEventListener("load", () => {
+  //     document.body.classList.remove("js-loading")
+  //   })
+  // }
 
   render() {
     return (
