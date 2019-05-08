@@ -177,6 +177,7 @@
 
   &__line {
     opacity: 0;
+    animation: LineFadeIn 0.8s 0.2s forwards ease-in;
 
     @include respond(phone) {
       width: 100vw;
@@ -191,10 +192,11 @@
   &__image {
     height: 100%;
     opacity: 0;
+    animation: ImageFadeIn 0.8s 0.6s forwards;
 
     &-animated {
       height: 100%;
-      opacity: 0;
+      opacity: 1;
       animation: ImageFadeIn 0.8s 0.6s forwards;
     }
   }
@@ -212,6 +214,7 @@
     margin-top: -1rem;
     opacity: 0;
     height: 28vh;
+    animation: ContentFadeIn 0.8s 0.8s forwards;
 
     &-animated {
       margin-top: -1rem;
@@ -244,6 +247,7 @@
     left: 5%;
     font-size: 3rem;
     opacity: 0;
+    animation: ContentFadeIn 0.8s 0.8s forwards;
 
     @include respond(phone) {
       top: 85%;
@@ -456,7 +460,7 @@
 }
 
 .hiddenMobile {
-  
+
   @include respond(phone) {
     display: none;
   }
