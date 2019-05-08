@@ -21,9 +21,9 @@ class IndexPage extends React.Component {
     return (
       <div className="application">
     {/* TODO: Comment out helmet for deployment */}
-    <Helmet>
+    {/* <Helmet>
       <script src={"ScrollMagic.min.js"} />
-    </Helmet>
+    </Helmet> */}
     <Container>
       <Header />
       <About />
