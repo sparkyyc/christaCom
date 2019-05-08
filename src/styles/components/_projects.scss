@@ -27,7 +27,7 @@
   &__swipeText {
     display: none;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       color: $color-grey-light-3;
       font-family: "Orbitron", sans-serif;
       font-size: 2rem;
@@ -89,7 +89,7 @@
     cursor: pointer;
     // flex-basis: 25%;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       display: none;
     }
 
@@ -151,12 +151,22 @@
   // flex-basis: 25%;
   margin: 0 10rem;
 
+  @include respond(tab-land) {
+    margin: 0 2rem;
+  }
+
+  @include respond(tab-port) {
+    margin: 0;
+    left: 20%;
+  }
+
   @include respond(phone) {
     width: 100vw;
     padding: 2rem;
     margin: 0;
     margin-top: 15rem;
     border-radius: 6px;
+    left: 0;
   }
 
   &-animated {
@@ -448,7 +458,7 @@
   // width: 100vw;
   display: none;
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     display: inline-block;
   }
 }
@@ -460,8 +470,7 @@
 }
 
 .hiddenMobile {
-
-  @include respond(phone) {
+  @include respond(tab-port) {
     display: none;
   }
 }
