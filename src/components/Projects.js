@@ -147,6 +147,15 @@ class Projects extends React.Component {
               />
             </CSSTransition>
             <Media
+              query="(min-width: 601px)"
+              defaultMAtches={this.state.device === "desktop"}
+              render={() => (
+                <TransitionGroup classNames="cardGroupTrans">
+                  {cardArr.slice(pageCurr, cardNumToShow + pageCurr)}
+                </TransitionGroup>
+              )}
+            />
+            <Media
               query="(max-width: 600px)"
               defaultMAtches={this.state.device === "mobile"}
               render={() => (
@@ -165,15 +174,6 @@ class Projects extends React.Component {
                 >
                   {mobileCardArr}
                 </ReactSwipe>
-              )}
-            />
-            <Media
-              query="(min-width: 601px)"
-              defaultMAtches={this.state.device === "desktop"}
-              render={() => (
-                <TransitionGroup classNames="cardGroupTrans">
-                  {cardArr.slice(pageCurr, cardNumToShow + pageCurr)}
-                </TransitionGroup>
               )}
             />
             <CSSTransition timeout={6000} classNames="arrow-right" key={3}>
