@@ -18,7 +18,12 @@ class Projects extends React.Component {
       pageCurr: 0,
       cardNumToShow: 2,
       animated: [false, false, false],
+      key: 0,
     }
+  }
+
+  componentDidMount() {
+    this.setState({ key: 1 })
   }
 
   onClickLeft = () => {
@@ -141,7 +146,7 @@ class Projects extends React.Component {
                   style={{ opacity: pageCurr === 0 ? "0" : 1 }}
                 />
               </CSSTransition>
-            <Media query="(max-width: 599px)">
+            <Media query="(max-width: 600px)" key={this.state.key}>
               {matches =>
                 matches ? (
                   <ReactSwipe
@@ -160,9 +165,9 @@ class Projects extends React.Component {
                     {mobileCardArr}
                   </ReactSwipe>
                 ) : (
-                  <TransitionGroup classNames="cardGroupTrans">
-                    {cardArr.slice(pageCurr, cardNumToShow + pageCurr)}
-                  </TransitionGroup>
+                    <TransitionGroup classNames="cardGroupTrans">
+                      {cardArr.slice(pageCurr, cardNumToShow + pageCurr)}
+                    </TransitionGroup>
                 )
               }
             </Media>
