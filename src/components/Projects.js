@@ -18,7 +18,7 @@ class Projects extends React.Component {
       pageCurr: 0,
       cardNumToShow: 2,
       animated: [false, false, false],
-      key: 0,
+      device: "desktop",
     }
   }
 
@@ -139,46 +139,51 @@ class Projects extends React.Component {
         <div id="trigger1" />
         <div className="projects__container" id="projects">
           <TransitionGroup className="transGroup">
-          <CSSTransition timeout={6000} classNames="arrow-left" key={5}>
-                <ShipArrow
-                  className="projects__arrow projects__arrow-left"
-                  onClick={ pageCurr > 0 ? this.onClickLeft : null }
-                  style={{ opacity: pageCurr === 0 ? "0" : 1 }}
-                />
-              </CSSTransition>
-            <Media query="(max-width: 600px)" dataId={this.state.key}>
-              {matches =>
-                matches ? (
-                  <ReactSwipe
-                    className="carousel"
-                    swipeOptions={{
-                      widthOfSiblingSlidePreview: 10,
-                      continuous: false,
-                      startSlide:
-                        startSlide < mobileCardArr.length && startSlide >= 0
-                          ? startSlide
-                          : 0,
-                    }}
-                    ref={reactSwipe => (this.reactSwipe = reactSwipe)}
-                    key={mobileCardArr.length}
-                  >
-                    {mobileCardArr}
-                  </ReactSwipe>
-                ) : (
-                    <TransitionGroup classNames="cardGroupTrans">
-                      {cardArr.slice(pageCurr, cardNumToShow + pageCurr)}
-                    </TransitionGroup>
-                )
-              }
-            </Media>
+            <CSSTransition timeout={6000} classNames="arrow-left" key={5}>
+              <ShipArrow
+                className="projects__arrow projects__arrow-left"
+                onClick={pageCurr > 0 ? this.onClickLeft : null}
+                style={{ opacity: pageCurr === 0 ? "0" : 1 }}
+              />
+            </CSSTransition>
+            <Media
+              query="(max-width: 600px)"
+              defaultMAtches={this.state.device === "mobile"}
+              render={() => (
+                <ReactSwipe
+                  className="carousel"
+                  swipeOptions={{
+                    widthOfSiblingSlidePreview: 10,
+                    continuous: false,
+                    startSlide:
+                      startSlide < mobileCardArr.length && startSlide >= 0
+                        ? startSlide
+                        : 0,
+                  }}
+                  ref={reactSwipe => (this.reactSwipe = reactSwipe)}
+                  key={mobileCardArr.length}
+                >
+                  {mobileCardArr}
+                </ReactSwipe>
+              )}
+            />
+            <Media
+              query="(min-width: 601px)"
+              defaultMAtches={this.state.device === "desktop"}
+              render={() => (
+                <TransitionGroup classNames="cardGroupTrans">
+                  {cardArr.slice(pageCurr, cardNumToShow + pageCurr)}
+                </TransitionGroup>
+              )}
+            />
             <CSSTransition timeout={6000} classNames="arrow-right" key={3}>
-                <ShipArrow
-                  className="projects__arrow projects__arrow-right"
-                  onClick={ pageCurr < cardArr.length - 2 ? this.onClickRight: {} }
-                  style={{opacity: pageCurr >= cardArr.length - 2 ? "0" : "1"}}
-                  id="arrow-right"
-                />
-              </CSSTransition>
+              <ShipArrow
+                className="projects__arrow projects__arrow-right"
+                onClick={pageCurr < cardArr.length - 2 ? this.onClickRight : {}}
+                style={{ opacity: pageCurr >= cardArr.length - 2 ? "0" : "1" }}
+                id="arrow-right"
+              />
+            </CSSTransition>
           </TransitionGroup>
         </div>
       </div>
@@ -187,7 +192,6 @@ class Projects extends React.Component {
 }
 
 export default Projects
-
 
 // {pageCurr < cardArr.length - 2 ? (
 //   <CSSTransition timeout={6000} classNames="arrow-right" key={3}>
@@ -217,3 +221,31 @@ export default Projects
 //     <div className="arrow-placeholder" />
 //   </CSSTransition>
 // )}
+
+{
+  /* <Media query="(max-width: 600px)">
+              {matches =>
+                matches ? (
+                  <ReactSwipe
+                    className="carousel"
+                    swipeOptions={{
+                      widthOfSiblingSlidePreview: 10,
+                      continuous: false,
+                      startSlide:
+                        startSlide < mobileCardArr.length && startSlide >= 0
+                          ? startSlide
+                          : 0,
+                    }}
+                    ref={reactSwipe => (this.reactSwipe = reactSwipe)}
+                    key={mobileCardArr.length}
+                  >
+                    {mobileCardArr}
+                  </ReactSwipe>
+                ) : (
+                    <TransitionGroup classNames="cardGroupTrans">
+                      {cardArr.slice(pageCurr, cardNumToShow + pageCurr)}
+                    </TransitionGroup>
+                )
+              }
+            </Media> */
+}
