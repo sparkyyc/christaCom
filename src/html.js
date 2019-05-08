@@ -22,7 +22,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script src="ScrollMagic.min.js" />
+        {/* <script src="ScrollMagic.min.js" /> */}
       </body>
     </html>
   )
