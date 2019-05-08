@@ -148,7 +148,7 @@ class Projects extends React.Component {
             </CSSTransition>
             <Media
               query="(min-width: 601px)"
-              defaultMAtches={this.state.device === "desktop"}
+              // defaultMAtches={this.state.device === "desktop"}
               render={() => (
                 <TransitionGroup classNames="cardGroupTrans">
                   {cardArr.slice(pageCurr, cardNumToShow + pageCurr)}
@@ -157,7 +157,7 @@ class Projects extends React.Component {
             />
             <Media
               query="(max-width: 600px)"
-              defaultMAtches={this.state.device === "mobile"}
+              // defaultMAtches={this.state.device === "mobile"}
               render={() => (
                 <ReactSwipe
                   className="carousel"
