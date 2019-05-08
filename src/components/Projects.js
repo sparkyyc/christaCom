@@ -1,6 +1,5 @@
 import React from "react"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
-import Media from "react-media"
 import ReactSwipe from "react-swipe"
 
 import Card from "./Card"
@@ -184,89 +183,62 @@ class Projects extends React.Component {
 
 export default Projects
 
-// {pageCurr < cardArr.length - 2 ? (
-//   <CSSTransition timeout={6000} classNames="arrow-right" key={3}>
-//     <ShipArrow
-//       className="projects__arrow projects__arrow-right"
-//       onClick={ pageCurr < cardArr.length - 2 ? this.onClickRight: {} }
-//       style={ pageCurr > cardArr.length - 2 ? {opacity: "0"}: {}}
-//       id="arrow-right"
-//     />
-//   </CSSTransition>
-// ) : (
-//   <CSSTransition timeout={6000} classNames="arrow-right" key={4}>
-//     <div className="arrow-placeholder" />
-//   </CSSTransition>
-// )}
+// put at bottom of scroll magic min to work
 
-// {pageCurr > 0 ? (
-//   <CSSTransition timeout={6000} classNames="arrow-left" key={5}>
-//     <ShipArrow
-//       className="projects__arrow projects__arrow-left"
-//       onClick={ pageCurr > 0 ? this.onClickLeft : null }
-//       style={ pageCurr === 0 ? {opacity: "0"} : null }
-//     />
-//   </CSSTransition>
-// ) : (
-//   <CSSTransition timeout={6000} classNames="arrow-left" key={6}>
-//     <div className="arrow-placeholder" />
-//   </CSSTransition>
-// )}
+// var controller = new ScrollMagic.Controller()
 
-/* <Media query="(max-width: 600px)">
-              {matches =>
-                matches ? (
-                  <ReactSwipe
-                    className="carousel"
-                    swipeOptions={{
-                      widthOfSiblingSlidePreview: 10,
-                      continuous: false,
-                      startSlide:
-                        startSlide < mobileCardArr.length && startSlide >= 0
-                          ? startSlide
-                          : 0,
-                    }}
-                    ref={reactSwipe => (this.reactSwipe = reactSwipe)}
-                    key={mobileCardArr.length}
-                  >
-                    {mobileCardArr}
-                  </ReactSwipe>
-                ) : (
-                    <TransitionGroup classNames="cardGroupTrans">
-                      {cardArr.slice(pageCurr, cardNumToShow + pageCurr)}
-                    </TransitionGroup>
-                )
-              }
-            </Media> */
+// var scrollDuration = 900
+//     new ScrollMagic.Scene({
+//       triggerElement: "#trigger1",
+//       duration: scrollDuration, // scroll distance
+//       //   offset: 200 // start this scene after scrolling for 50px
+//     })
+//       .setClassToggle("#card-image", "card__image-animated")
+//       //   .setPin("#myElement") // pins the element for the the scene's duration
+//       .addTo(controller) // assign the scene to the controller
 
-/* <Media
-              query="(min-width: 601px)"
-              // defaultMatches={this.state.device === "desktop"}
-              render={() => (
-                <TransitionGroup classNames="cardGroupTrans">
-                  {cardArr.slice(pageCurr, cardNumToShow + pageCurr)}
-                </TransitionGroup>
-              )}
-            /> */
+//     new ScrollMagic.Scene({
+//       triggerElement: "#trigger1",
+//       duration: scrollDuration, // scroll distance
+//       //   offset: 200 // start this scene after scrolling for 50px
+//     })
+//       .setClassToggle("#card-line", "card__line-animated")
+//       //   .setPin("#myElement") // pins the element for the the scene's duration
+//       .addTo(controller) // assign the scene to the controller
 
-/* <Media
-              query="(max-width: 600px)"
-              // defaultMatches={this.state.device === "mobile"}
-              render={() => (
-                <ReactSwipe
-                  className="carousel"
-                  swipeOptions={{
-                    widthOfSiblingSlidePreview: 10,
-                    continuous: false,
-                    startSlide:
-                      startSlide < mobileCardArr.length && startSlide >= 0
-                        ? startSlide
-                        : 0,
-                  }}
-                  ref={reactSwipe => (this.reactSwipe = reactSwipe)}
-                  key={mobileCardArr.length}
-                >
-                  {mobileCardArr}
-                </ReactSwipe>
-              )}
-            /> */
+//     new ScrollMagic.Scene({
+//       triggerElement: "#trigger1",
+//       duration: scrollDuration, // scroll distance
+//       //   offset: 200 // start this scene after scrolling for 50px
+//     })
+//       .setClassToggle("#card-content", "card__content-animated")
+//       //   .setPin("#myElement") // pins the element for the the scene's duration
+//       .addTo(controller) // assign the scene to the controller
+
+//     new ScrollMagic.Scene({
+//       triggerElement: "#trigger1",
+//       duration: scrollDuration, // scroll distance
+//       //   offset: 200 // start this scene after scrolling for 50px
+//     })
+//       .setClassToggle("#card-footer", "card__footer-animated")
+//       //   .setPin("#myElement") // pins the element for the the scene's duration
+//       .addTo(controller) // assign the scene to the controller
+
+//       new ScrollMagic.Scene({
+//         triggerElement: "#trigger1",
+//         duration: scrollDuration, // scroll distance
+//         //   offset: 200 // start this scene after scrolling for 50px
+//       })
+//         .setClassToggle("#arrow-right", "projects__arrow-right-animated")
+//         //   .setPin("#myElement") // pins the element for the the scene's duration
+//         .addTo(controller) // assign the scene to the controller
+
+//         new ScrollMagic.Scene({
+//           triggerElement: "#trigger1",
+//           duration: scrollDuration, // scroll distance
+//           //   offset: 200 // start this scene after scrolling for 50px
+//         })
+//           .setClassToggle("#swipeText", "projects__swipeText-animated")
+//           //   .setPin("#myElement") // pins the element for the the scene's duration
+//           .addTo(controller) // assign the scene to the controller
+ 
