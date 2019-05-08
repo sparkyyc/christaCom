@@ -146,7 +146,7 @@ class Projects extends React.Component {
                   style={{ opacity: pageCurr === 0 ? "0" : 1 }}
                 />
               </CSSTransition>
-            <Media query="(max-width: 600px)" key={this.state.key}>
+            <Media query="(max-width: 600px)" dataId={this.state.key}>
               {matches =>
                 matches ? (
                   <ReactSwipe
