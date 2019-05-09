@@ -13,7 +13,7 @@ class Skills extends React.Component {
 
     this.state = {
       screenText:
-        "Here are a few of the technologies I know, click them for either some useful info or a joke, it's a surprise.",
+        "Here are a few of the technologies I know, click them for either some info on my knowledge or a joke, it's a surprise.",
       clicked: "Christa",
     }
   }
@@ -23,7 +23,7 @@ class Skills extends React.Component {
       case "main":
         this.setState({
           screenText:
-            "Here are a few of the technologies I know, click them for either some useful info or a joke, it's a surprise.",
+            "Here are a few of the technologies I know, click them for either some info on my knowledge  or a joke, it's a surprise.",
           clicked: "Christa",
         })
         break
@@ -127,7 +127,7 @@ class Skills extends React.Component {
       default:
         this.setState({
           screenText:
-            "Here are a few of the technologies I know, click them for either some useful info or a joke, it's a surprise.",
+            "Here are a few of the technologies I know, click them for either some info on my knowledge or a joke, it's a surprise.",
           clicked: "",
         })
         break
