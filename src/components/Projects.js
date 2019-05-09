@@ -146,7 +146,7 @@ class Projects extends React.Component {
               />
             </CSSTransition>
             <div className="hiddenMobile" key={5}>
-              <TransitionGroup classNames="cardGroupTrans">
+              <TransitionGroup className="cardGroupTrans">
                 {cardArr.slice(pageCurr, cardNumToShow + pageCurr)}
               </TransitionGroup>
             </div>
