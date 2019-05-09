@@ -85,8 +85,9 @@
 
   &__info-box {
     position: absolute;
-    top: 35%;
-    left: 8%;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
     font-family: "Titillium Web", sans-serif;
 
     @include respond(tab-port) {
@@ -94,6 +95,7 @@
       top: 67%;
       margin-top: -140px;
       margin-left: -240px;
+      transform: translate(0%, 0%);
     }
 
     @include respond(phone) {
@@ -103,6 +105,7 @@
     @include respond(big-desktop) {
       left: 14%;
       top: 36%;
+      transform: translate(0%, 0%);
     }
   }
 
