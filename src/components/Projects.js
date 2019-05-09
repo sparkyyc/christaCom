@@ -76,6 +76,7 @@ class Projects extends React.Component {
           github="https://github.com/sparkyyc/Agility"
           animated={animated[1]}
           key={1}
+          video="https://vimeo.com/user92990409/review/335218285/413a85150f"
         />
       </CSSTransition>,
       <CSSTransition timeout={2000} classNames="cardTrans" key={2}>

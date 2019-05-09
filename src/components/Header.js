@@ -49,6 +49,9 @@ class Header extends React.Component {
                 >
                   <i className="background__links-icon icon fab fa-linkedin-in" />
                 </a>
+                <a href="mailto:christa.sparks.k@gmail.com" className="background__link">
+                  <i className="background__links-icon icon far fa-envelope" />
+                </a>
               </div>
             </div>
             <p className="background__text-sub">

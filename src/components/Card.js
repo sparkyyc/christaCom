@@ -33,7 +33,7 @@ class Card extends React.Component {
             rel="noopener noreferrer"
             className="link"
           >
-            demo video
+            /demo
           </a>
         </div>
       )
