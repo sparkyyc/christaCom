@@ -16,8 +16,8 @@ class Header extends React.Component {
           <div className="logo__container">
             <span className="logo__circle">
               <Rocketship className="logo__rocketship animated" />
-              <Firstname fill="#fff" className="logo__firstname" />
-              <Lastname fill="#fff" className="logo__lastname" />
+              <Firstname className="logo__firstname" />
+              <Lastname className="logo__lastname" />
               <span className="logo__swoop" />
               <Stars1 className="logo__stars logo__stars-1" />
               <Stars1 className="logo__stars logo__stars-2" />

@@ -236,6 +236,9 @@
     height: auto;
     fill: $color-white;
     filter: url(#shadowPlanet);
+    -webkit-filter: url(#shadowPlanet);
+
+    
 
     grid-column: 9 / -1;
     grid-row: 1 / span 4;
