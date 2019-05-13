@@ -1,8 +1,8 @@
 import React from "react"
 
 import Rocketship from "../assets/rocketship1.svg"
-import Firstname from "../assets/NasaChrista"
-import Lastname from "../assets/NasaSparks"
+import Firstname from "../assets/CHRISTA.svg"
+import Lastname from "../assets/SPARKS.svg"
 import Stars1 from "../assets/stars/sharp-twinkle-group.svg"
 import Stars2 from "../assets/stars/mid-cross-group-filled.svg"
 import Planet from "../assets/planet/planet-5.svg"
