@@ -97,6 +97,11 @@
     &-left {
       transform: rotate(-90deg);
 
+      @include respond(big-desktop) {
+        margin: 0;
+        margin-left: 20rem;
+      }
+
       &:hover {
         transform: translateX(-3px) rotate(-90deg);
       }
@@ -108,6 +113,11 @@
 
     &-right {
       transform: rotate(90deg);
+
+      @include respond(big-desktop) {
+        margin: 0;
+        margin-right: 20rem;
+      }
 
       &-animated {
         transform: rotate(90deg);
@@ -455,6 +465,7 @@
   @include respond(phone) {
     display: none;
   }
+
 }
 
 .carousel {
