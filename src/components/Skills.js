@@ -64,7 +64,7 @@ class Skills extends React.Component {
       case "node":
         this.setState({
           screenText:
-            "Why was the JavaScript developer sad? Becuase he didn't Node how to Express himself.",
+            "Why was the JavaScript developer sad? Because he didn't Node how to Express himself.",
           clicked: "Node.js",
         })
         break
