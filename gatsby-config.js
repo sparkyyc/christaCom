@@ -9,15 +9,13 @@ module.exports = {
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
-      // options: {
-      //   name: `gatsby-starter-default`,
-      //   short_name: `starter`,
-      //   start_url: `/`,
-      //   background_color: `#663399`,
-      //   theme_color: `#663399`,
-      //   display: `minimal-ui`,
-      //   // icon: `/src/images/Asset 11.png`, // This path is relative to the root of the site.
-      // },
+      options: {
+        name: `christaCom`,
+        short_name: `portfolio`,
+        start_url: `/`,
+        display: `minimal-ui`,
+        icon: `src/images/favicon-32x32.png`, // This path is relative to the root of the site.
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
